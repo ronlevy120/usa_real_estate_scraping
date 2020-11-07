@@ -7,7 +7,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 
 
-def get_image(place ,i , driver, inner_folder):
+def get_image(place ,page , driver, inner_folder):
     """
     Downloading images from a given site.
     :param driver: The webdriver used in selenium
@@ -27,7 +27,7 @@ def get_image(place ,i , driver, inner_folder):
             extension = 'jpeg'
         file_name = f"img_{j}." + extension
         try:
-            urllib.request.urlretrieve(img, os.path.join(place, i,  inner_folder, file_name))
+            urllib.request.urlretrieve(img, os.path.join(place, page,  inner_folder, file_name))
         except ValueError:
             pass
 
@@ -43,18 +43,18 @@ def get_urls(driver):
     return urls
 
 
-def make_inner_folder(place, idx, cell_url, i):
+def make_inner_folder(place, idx, cell_url, page):
     """
     Create a folder inside the appropriate place folder
     :param idx: The index of the url from the url's list
     :param cell_url: The cell in the table which we're working on
     :place The location of the property. This is the parent folder
-    :i Page number
+    :page Page number
     :return: the name of the folder that has been just created
     """
     inner_folder = str(idx + 1) + '__' + cell_url[-15:]
-    if not os.path.exists(os.path.join(place, i, inner_folder)):
-        os.mkdir(os.path.join(place, i, inner_folder))
+    if not os.path.exists(os.path.join(place, page, inner_folder)):
+        os.mkdir(os.path.join(place, page, inner_folder))
     return inner_folder
 
 
@@ -141,27 +141,27 @@ def main():
             os.mkdir(place)
         url = HOMEPAGE + place + '/' + "list_v"
         driver.get(url)
-        i = 1
+        page = 1
         while len(driver.find_elements(By.TAG_NAME, "td")) > 3:
-            if i > 1:
-                url = HOMEPAGE + place + f"/{i}_p/list_v"
+            if page > 1:
+                url = HOMEPAGE + place + f"/{page}_p/list_v"
             driver.get(url)
-            i = str(i)
-            if not os.path.exists(os.path.join(place, i)):
-                os.mkdir(os.path.join(place, i))
+            page = str(page)
+            if not os.path.exists(os.path.join(place, page)):
+                os.mkdir(os.path.join(place, page))
             urls = get_urls(driver)
             for idx, cell_url in enumerate(urls):
-                print(f"Page number: {i}")
-                inner_folder = make_inner_folder(place, idx, cell_url ,i)
+                print(f"Page number: {page}")
+                inner_folder = make_inner_folder(place, idx, cell_url, page)
                 print(f"Folder name:{inner_folder}")
                 driver.get(cell_url)
-                get_image(driver=driver, inner_folder=inner_folder, place=place, i=i)
+                get_image(driver=driver, inner_folder=inner_folder, place=place, page=page)
                 print(info_data(driver))
                 print(table_data(driver))
             driver.get(url)
-            print(f"End of loop {i}")
-            i = int(i)
-            i += 1
+            print(f"End of loop {page}")
+            page = int(page)
+            page += 1
 
 
 if __name__ == '__main__':

@@ -5,9 +5,25 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
+import argparse
+import sqlite3
+import os
+import contextlib
+import itertools
+import random
+from datetime import datetime
+import csv
 
+DB_FILENAME = 'usa_scraping_database.db'
 
-def get_image(place ,page , driver, inner_folder):
+def list_of_places():
+    parser = argparse.ArgumentParser(description="scraper")
+    parser.add_argument('places',
+                        help="Places in the US to look for, space between each place")
+    args = parser.parse_args()
+    return list(map(lambda x:x.lower(),args.places.split(' ')))
+
+def get_image(place, page, driver, inner_folder):
     """
     Downloading images from a given site.
     :param driver: The webdriver used in selenium
@@ -135,7 +151,7 @@ def main():
     WEBDRIVER_PATH = r"C:\Users\user\Documents\the_webdriver\chromedriver.exe"
     driver = webdriver.Chrome(executable_path=WEBDRIVER_PATH)  # You MUST install WebDriver first
     HOMEPAGE = "https://www.homepath.com/listings/"
-    places = ['new york']  # Insert here list of places
+    places = list_of_places()
     for place in places:
         if not os.path.exists(place):
             os.mkdir(place)
@@ -162,6 +178,49 @@ def main():
             print(f"End of loop {page}")
             page = int(page)
             page += 1
+
+DB_FILENAME = 'usa_scraping.db'
+
+def sql():
+    with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
+        with con:  # auto-commits
+            cur = con.cursor()
+            cur.execute('pragma foreign_keys')
+            cur.execute("""INSERT OR IGNORE INTO agents (idagents, agent_name ,agent_phone, idproerties)
+            VALUES (?, ?, ?, ?)""",[])
+            cur.execute("""INSERT OR IGNORE INTO properties (
+            idproperties ,address, just_list, reo_id, mls_id)
+            VALUES (?, ?, ?, ?, ?)""",[])
+            cur.execute("""INSERT OR IGNORE INTO company (
+            idcompany, comp_name, comp_phone, comp_address, idproperties)
+            VALUES (?, ?, ?, ?, ?)""",[])
+            cur.execute("""INSERT OR IGNORE INTO prop_description (
+            idprop_description, description, idproperties)
+            VALUES (?, ?, ?)""",[])
+            cur.execute("""INSERT OR IGNORE INTO images (
+            idimages, img_name, folder, page, place, idproperties)
+            VALUES (?, ?, ?, ?, ?, ?)""",[])
+            cur.execute("""INSERT OR IGNORE INTO property_detailes (
+            id_property_detailes, idproperties, price, bedrooms, Bathrooms, 
+            `Full Baths`, `Garage Description`, `Basement`, `Total Rooms`, `Living Area Size`,
+            `Lot Size in acres`, `Style`, `Exterior`, `Roof`, `Flooring`, 
+            `Air Conditioning`, `Utilities`, `Pool`, `Sewer Type`, `HOA`, 
+            `HOA Fees is US Dollar`, `Year Built`)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",[])
+            cur.execute("""INSERT OR IGNORE INTO Property_Tax_Roll_Details (
+            `idProperty Tax Roll Details`, `Elementary School`, 
+            `Junior High School`, `Senior High School`,
+            `Subdivision` , `idproperties`)
+            VALUES (?, ?, ?, ?, ?, ?)""",[])
+            cur.execute("""INSERT OR IGNORE INTO County_Tax_Roll_Details (
+            `idCounty_Tax_Roll_Details`, `Air Conditioning`, 
+            `Bedrooms`, `Fireplaces`, `Half Baths`, 
+            `Property Type`, `APN`, `Baths`, `Construction Type`, `Full Baths`,
+            `Land Area`, `Num_of Stories`, `idproperties`)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",[])
+            con.commit()
+
+
 
 
 if __name__ == '__main__':

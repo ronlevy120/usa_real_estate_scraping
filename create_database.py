@@ -10,11 +10,12 @@ class CreateDB:
     db_connection = mysql.connector.connect(
                 host=HOST,
                 user=USER,
-                passwd= PASS)
+                passwd=PASS)
 
     db_cursor = db_connection.cursor()
     db_cursor.execute("DROP DATABASE usa_scraping_database;")
     db_cursor.execute("CREATE DATABASE IF NOT EXISTS usa_scraping_database;")
+
 
 class Tables:
 
@@ -26,11 +27,10 @@ class Tables:
         self.db_connection = mysql.connector.connect(
                     host=HOST,
                     user=USER,
-                    passwd= PASS,
-            database="usa_scraping_database")
+                    passwd=PASS, database="usa_scraping_database")
         self.cur = self.db_connection.cursor()
 
-    def drop_talbes_if_exist(self):
+    def drop_tables_if_exist(self):
         """Delete old tables if exist"""
         self.cur.execute('drop table if exists agents;')
         self.cur.execute('drop table if exists County_Tax_Roll_Details;')
@@ -60,6 +60,7 @@ class Tables:
         FOREIGN KEY(idproperties)
         REFERENCES properties(idproperties))
         ''')
+
     def table_company(self):
         """Create company table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS company (
@@ -70,6 +71,7 @@ class Tables:
         FOREIGN KEY (idproperties)
         REFERENCES properties (idproperties))
         ''')
+
     def table_prop_description(self):
         """Create prop_description table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS prop_description (
@@ -79,6 +81,7 @@ class Tables:
         FOREIGN KEY (idproperties)
         REFERENCES properties (idproperties))
         ''')
+
     def table_property_detailes(self):
         """Create property_detailes table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS property_detailes (
@@ -107,6 +110,7 @@ class Tables:
         FOREIGN KEY (idproperties)
         REFERENCES properties (idproperties))
         ''')
+
     def table_Property_Tax_Roll_Details(self):
         """Create Property_Tax_Roll_Details table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS `Property_Tax_Roll_Details` (
@@ -140,10 +144,11 @@ class Tables:
         REFERENCES `properties` (`idproperties`))
         ''')
 
+
 if __name__ == '__main__':
     CreateDB()
     t = Tables()
-    t.drop_talbes_if_exist()
+    t.drop_tables_if_exist()
     t.table_properties()
     t.table_agents()
     t.table_company()

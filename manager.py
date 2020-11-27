@@ -19,15 +19,14 @@ class Sql:
     def sql_agents(self):
         """Insert values into agents table"""
         self.cur.execute("""INSERT INTO agents (idproperties, agent_name ,agent_phone)
-                    VALUES (%s ,%s, %s)""",[self.last_id, self.sc.agent_name(), self.sc.agent_phone()])
-
+                    VALUES (%s ,%s, %s)""", [self.last_id, self.sc.agent_name(), self.sc.agent_phone()])
 
     def sql_company(self):
         """Insert values into company table"""
         self.cur.execute("""INSERT INTO company (
             idproperties, comp_name, comp_phone, comp_address)
-            VALUES (%s, %s, %s, %s)""", [self.last_id, self.sc.agent_company_name(), self.sc.agent_company_phone(),
-                                        self.sc.agent_company_address()])
+            VALUES (%s, %s, %s, %s)""", [self.last_id, self.sc.agent_company_name(),
+                                         self.sc.agent_company_phone(), self.sc.agent_company_address()])
 
     def sql_prop_description(self):
         """Insert values into prop_description table"""
@@ -80,13 +79,10 @@ class Sql:
                     `Lot Size in acres`, `Exterior`, `Flooring`,
                     `Air Conditioning`, `Utilities`, `Pool`, `Sewer Type`, `HOA`,
                     `HOA Fees is US Dollar`, `Year Built`)
-                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""",
-                    [self.last_id, price,bedrooms, bathrooms,
-                     full_bath, garage,
-                     basement, living_area ,lot_size ,exterior ,
-                     flooring, air_conditioning,
-                     utilities, pool, sewer_type ,HOA ,
-                     HOA_fees, year_built])
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,
+                     %s, %s, %s, %s, %s, %s, %s)""", [self.last_id, price, bedrooms, bathrooms, full_bath, garage,
+                     basement, living_area, lot_size, exterior, flooring, air_conditioning,
+                     utilities, pool, sewer_type, HOA, HOA_fees, year_built])
 
     def Property_Tax_Roll_Details(self):
         """Insert values into Property_Tax_Roll_Details table"""
@@ -104,14 +100,13 @@ class Sql:
         idproperties, `Elementary School`, `Junior High School`, `Senior High School`,
         `Subdivision`)
         VALUES (%s, %s, %s, %s, %s)""", [self.last_id, elementary_school,
-                                       junior_high_School, senior_high_school,
-                                         subdivision])
+                                         junior_high_School, senior_high_school, subdivision])
 
     def County_Tax_Roll_Details(self):
         """Insert values into County_Tax_Roll_Details table"""
         data_dict = self.sc.table_data()
         ac = bedrooms = fire = half_b = prop_type = apn = bath =\
-            const_type = full_bath =land_area = num_stories = None
+            const_type = full_bath = land_area = num_stories = None
         if 'Air Conditioning' in data_dict:
             ac = data_dict['Air Conditioning']
         if 'Bedrooms' in data_dict:
@@ -139,6 +134,6 @@ class Sql:
             `Bedrooms`, `Fireplaces`, `Half Baths`,
             `Property Type`, `APN`, `Baths`, `Construction Type`, `Full Baths`,
             `Land Area`, `Num_of Stories`)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""",
-                    [self.last_id, ac, bedrooms,fire , half_b, prop_type, apn, bath,
-                     const_type ,full_bath, land_area ,num_stories])
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""", [self.last_id, ac, bedrooms, fire, half_b,
+                                                                         prop_type, apn, bath, const_type, full_bath,
+                                                                         land_area, num_stories])

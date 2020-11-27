@@ -16,13 +16,14 @@ class Main:
         and the limits on the search
         """
         self.ar = ArgParseInput()
-        self.places = self.ar.argp()[0]
+        self.places = self.ar.argp()[0]  # scrap those places
         self.search_limit = self.ar.argp()[1]
         if self.search_limit == 9999:
             self.search_limit = 'Unlimited search'
         print(f"limit pages up to page number: {self.search_limit}")
 
-    def make_folder(self, name):
+    @staticmethod
+    def make_folder(name):
         """
         Creates a folder.
         :name Folder name
@@ -32,10 +33,10 @@ class Main:
             os.mkdir(name)
 
     def run(self):
-        """Running the program with the impoted modules"""
+        """Running the program with the imported modules"""
         for self.place in self.places:
             print(f"Looking for results in: {self.place}")
-            self.sc = Scraper(place= self.place, path_to_driver=WEBDRIVER_PATH)
+            self.sc = Scraper(place=self.place, path_to_driver=WEBDRIVER_PATH)
             self.db = SaveToDatabase(self.sc)
             self.sc.create_driver()
             self.make_folder(self.place)
@@ -43,21 +44,23 @@ class Main:
             self.sc.driver_get(self.url)
             self.page = 1
             if self.search_limit == 'Unlimited search':
+                # If there are any results at this page
                 while self.sc.tables_len() > 3:
                     self.do_the_actual_work()
             else:
+                # If there are any results at this page or limitation not exceeded
                 while self.page < self.search_limit or self.sc.tables_len() <= 3:
                     self.do_the_actual_work()
                 
     def do_the_actual_work(self):
         """Doing the process of scraping the data and saving to database"""
-        if self.page > 1:
+        if self.page > 1:  # if it's not the first page
             self.url = HOMEPAGE + self.place + f"/{self.page}_p/list_v"
         self.sc.driver_get(self.url)
-        self.page = str(self.page)
+        self.page = str(self.page)  # So we can use the page as string, later we'll change to int back
         if not os.path.exists(os.path.join(self.place, self.page)):
             os.mkdir(os.path.join(self.place, self.page))
-        urls = self.sc.get_urls()
+        urls = self.sc.get_urls()  # List of all the url in that page
         for idx, cell_url in enumerate(urls):
             print(f"Page number: {self.page}")
             inner_folder = self.sc.make_inner_folder(idx, cell_url, self.page)
@@ -66,8 +69,8 @@ class Main:
             self.sc.get_image(inner_folder=inner_folder, page=self.page)
             print(self.sc.info_data())
             print(self.sc.table_data())
-            self.db.add_data_to_database()
-            print("Success!")
+            self.db.add_data_to_database()  # Making SQL Query from the data
+            print("Success!")  # Should print if there was no error
         self.sc.driver_get(self.url)
         print(f"End of loop {self.page}")
         self.page = int(self.page)

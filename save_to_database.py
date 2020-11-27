@@ -1,7 +1,6 @@
 import mysql.connector
 
 from manager import Sql
-from myconstants import *
 from passw import *
 
 
@@ -15,13 +14,13 @@ class SaveToDatabase:
         self.db_connection = mysql.connector.connect(
             host=HOST,
             user=USER,
-            passwd= PASS,
+            passwd=PASS,
             database="usa_scraping_database"
         )
         self.sc = sc
+
     def add_data_to_database(self):
         """Adding the data from the Scraper class to the MYSQL database"""
-        data_dict = self.sc.table_data()
         cur = self.db_connection.cursor()
         # cur.execute('pragma foreign_keys')
         mn = Sql(cur, self.sc)
@@ -33,5 +32,3 @@ class SaveToDatabase:
         mn.Property_Tax_Roll_Details()
         mn.County_Tax_Roll_Details()
         self.db_connection.commit()
-
-

@@ -26,7 +26,7 @@ class Scraper:
         """
         Downloading images from a given site.
         :param inner_folder the folder where the image is store, created by make_inner_folder()
-        :page the current page in the site the scraper is working on
+        :param page the current page in the site the scraper is working on
         :return: None. That function is just downloading the images
         """
         soup = BeautifulSoup(self.driver.page_source, 'html.parser')
@@ -66,7 +66,7 @@ class Scraper:
         Create a folder inside the appropriate place folder
         :param idx: The index of the url from the url's list
         :param cell_url: The cell in the table which we're working on
-        :page the current page in the site the scraper is working on
+        :param page the current page in the site the scraper is working on
         :return: the name of the folder that has been just created
         """
         inner_folder = str(idx + 1) + '__' + cell_url[HALF_URL:]
@@ -144,7 +144,7 @@ class Scraper:
             return
 
     def description(self):
-        "Return a string of the house description"
+        """Return a string of the house description"""
         try:
             return self.driver.find_element_by_class_name('class="description-body').text
         except NoSuchElementException:
@@ -171,16 +171,16 @@ class Scraper:
         zip_list = list(zip(table_label, table_values))
         data_dict = {}
         money_to_float = ['Price', 'Living Area Size', 'HOA Fees']
-        str_to_float = ['Bedrooms' ,'Bathrooms' ,'Full Baths' ,'Total Rooms']
+        str_to_float = ['Bedrooms', 'Bathrooms', 'Full Baths', 'Total Rooms']
         str_to_int = ['Half Baths']
         for a, b in zip_list:
             a = a.strip(' ').strip(':').strip(' ')
             if a in money_to_float:
-                b = float(b[1:].replace(',',''))
+                b = float(b[1:].replace(',', ''))
             elif a in str_to_float:
-                b = float(b.replace(',',''))
+                b = float(b.replace(',', ''))
             elif a in str_to_int:
-                b = int(b.replace(',',''))
+                b = int(b.replace(',', ''))
             elif a == 'Lot Size':
                 b = float(b.split(' ')[0])
             elif a == 'Year Built':
@@ -188,9 +188,10 @@ class Scraper:
             data_dict.update({a: b})
         return data_dict
 
+
 if __name__ == '__main__':
     place = 'california'
-    s = Scraper(place=place, path_to_driver= WEBDRIVER_PATH)
+    s = Scraper(place=place, path_to_driver=WEBDRIVER_PATH)
     place = 'california'
     url = HOMEPAGE + place + '/' + "list_v"
     s.driver_get(url)

@@ -23,7 +23,11 @@ Please make sure you have the following packages:
 * mysql-connector-python~=8.0.21
 
 # Pre-Launch
-* Create a file with `database name, database path, SQLhost, SQLuser, SQLpassword, WebDriver Path`. 
+* Create a file with `database name, database path, SQLhost, SQLuser, SQLpassword, WebDriver Path`.
+* In case you are not able to install `mysql`, follow the instructions in this well-explained youtube video:
+https://www.youtube.com/watch?v=E0s9YlFHiO4&t=1s 
+* If you're still having issues with running mysql package, run the following code on the environment terminal:
+```pip install mysql-connector-python```
 # Launch
 * Insert ```places LimitResults``` parameters
 * ```places``` are the locations you're looking for. for multiple places, please separate inputs by space

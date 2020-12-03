@@ -8,12 +8,12 @@ class CreateDB:
     CreateDB class removing old database name 'usa_scraping_database' if exist, and creates a new one
     """
     db_connection = mysql.connector.connect(
-                host=HOST,
-                user=USER,
-                passwd=PASS)
+        host=HOST,
+        user=USER,
+        passwd=PASS)
 
     db_cursor = db_connection.cursor()
-    db_cursor.execute("DROP DATABASE usa_scraping_database;")
+    db_cursor.execute("DROP DATABASE IF EXISTS usa_scraping_database;")
     db_cursor.execute("CREATE DATABASE IF NOT EXISTS usa_scraping_database;")
 
 
@@ -25,9 +25,9 @@ class Tables:
         Defines sc as the Scraper class object and connection to the database
         """
         self.db_connection = mysql.connector.connect(
-                    host=HOST,
-                    user=USER,
-                    passwd=PASS, database="usa_scraping_database")
+            host=HOST,
+            user=USER,
+            passwd=PASS, database="usa_scraping_database")
         self.cur = self.db_connection.cursor()
 
     def drop_tables_if_exist(self):

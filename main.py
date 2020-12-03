@@ -62,7 +62,7 @@ class Main:
                     self.do_the_actual_work()
             else:
                 # If there are any results at this page or limitation not exceeded
-                while self.page < self.search_limit or self.sc.tables_len() <= 3:
+                while self.page < self.search_limit or self.sc.tables_len() > 3:
                     self.do_the_actual_work()
                 
     def do_the_actual_work(self):

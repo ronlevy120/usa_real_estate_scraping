@@ -38,7 +38,7 @@ class Tables:
         self.cur.execute('drop table if exists property_detailes;')
         self.cur.execute('drop table if exists prop_description;')
         self.cur.execute('drop table if exists company;')
-        self.cur.execute('drop table if exists properties;')
+
 
     def table_properties(self):
         """Create properties table"""
@@ -127,8 +127,6 @@ class Tables:
     def County_Tax_Roll_Details(self):
         """Create County_Tax_Roll_Details table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS County_Tax_Roll_Details (
-        `Air Conditioning` VARCHAR(45),
-        Bedrooms FLOAT(11),
         Fireplaces VARCHAR(45),
         `Half Baths` INT(11),
         `Property Type` VARCHAR(45),

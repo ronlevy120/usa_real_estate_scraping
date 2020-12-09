@@ -2,7 +2,7 @@ import os
 
 from ArgParseInput import ArgParseInput
 from myconstants import *
-from passw import *
+import stocks_api
 from save_to_database import SaveToDatabase
 from scraper import Scraper
 import logging
@@ -21,16 +21,36 @@ class Main:
         Defines sc as the Scraper class object, ar as the ArgParseInput class object,
         and the limits on the search
         """
+        # reading the arguments input
         self.ar = ArgParseInput()
         logging.info(f'An ARgParseInput object was successfully made')
+
+        # getting the places argument (list)
         self.places = self.ar.argp()[0]  # scrap those places
         logging.info(f'A places instance was successfully made out of ARgParseInput')
         logging.debug(f'Places len: {len(self.places)}')
+
+        # getting the search_limit argument
         self.search_limit = self.ar.argp()[1]
         logging.debug(f'Search limit: {self.search_limit}')
         if self.search_limit == 9999:
             self.search_limit = 'Unlimited search'
         print(f"limit pages up to page number: {self.search_limit}")
+
+        # getting the years argument (for the stocks chart)
+        self.years = self.ar.argp()[2]
+        logging.debug(f'years: {self.years}')
+        if self.years < 1 or self.years > 50:
+            print(f"error showing US real estate main stocks performance chart for the last {self.years} years "
+                  f"\ninvalid input - should be an integer between [1-50]")
+            logging.error(f'invalid input: {self.years}, should be an integer between [1-50]')
+        else:
+            try:
+                stocks_api.main(self.years)
+                print(f"showing US real estate main stocks performance chart for the last {self.years} years")
+            except:
+                logging.error(f'error getting stocks_api data')
+
 
     @staticmethod
     def make_folder(name):
@@ -47,7 +67,7 @@ class Main:
         """Running the program with the imported modules"""
         for self.place in self.places:
             print(f"Looking for results in: {self.place}")
-            self.sc = Scraper(place=self.place, path_to_driver=WEBDRIVER_PATH)
+            self.sc = Scraper(place=self.place, path_to_driver='chromedriver.exe')
             logging.info(f'An instance was successfully made out of Scraper')
             self.db = SaveToDatabase(self.sc)
             logging.info(f'An instance was successfully made out of SavetToDatabase')

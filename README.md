@@ -28,11 +28,17 @@ Please make sure you have the following packages:
 https://www.youtube.com/watch?v=E0s9YlFHiO4&t=1s 
 * If you're still having issues with running mysql package, run the following code on the environment terminal:
 ```pip install mysql-connector-python```
-# Launch
-* Insert ```places LimitResults``` parameters
-* ```places``` are the locations you're looking for. for multiple places, please separate inputs by space
-* Default `place`: new-york
-* Default search limit: `Unlimited`
+# Launch (optional arguments)
+usage: main.py [-h] [places] [limit] [years]
+* -h : arguments ```help``` description
+* places : ```places``` in the US (city or states) to look for,with space between each place.
+(Default: new-york)
+* limit : limit the number of pages of houses scraping results (~40 houses per page) for the specific location.
+* years : presents the US real estate main stocks performance chart for the last N years.\
+          - [VGSIX] - Vanguard Real Estate Index Fund Investor Shares\
+          - [FSRNX] - Fidelity Real Estate Index Fund\
+          - [IYR] - iShares U.S. Real Estate ETF\
+          
  
 # Database
 The database is made of the following tables:

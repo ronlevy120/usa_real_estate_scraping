@@ -1,7 +1,7 @@
 import mysql.connector
 
 from manager import Sql
-from passw import *
+from myconstants import *
 
 
 class SaveToDatabase:

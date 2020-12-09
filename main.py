@@ -94,6 +94,5 @@ class Main:
         self.page += 1
 
 
-if __name__ == '__main__':
-    main = Main()
-    main.run()
+main = Main()
+main.run()

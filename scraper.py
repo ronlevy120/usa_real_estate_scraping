@@ -104,13 +104,10 @@ class Scraper:
         return True if it just listed, False otherwise
         """
         try:
-            just_listed = self.driver.find_element_by_class_name('justlisted').text == "Status: Just Listed"
-            if just_listed:
-                return True
-            else:
-                return False
+            just_listed = self.driver.find_element_by_class_name('text-default').text
             logging.info(f'Successfully returned boolean regarding just_listed')
             logging.debug(f'just_listed status: {just_listed}')
+            return just_listed
         except NoSuchElementException as e:
             logging.critical(f'The following error has occurred:{e}')
             return
@@ -239,14 +236,13 @@ class Scraper:
         logging.info(f'table_data has been Successfully called')
         return data_dict
 
-
-if __name__ == '__main__':
-    place = 'california'
-    s = Scraper(place=place, path_to_driver=WEBDRIVER_PATH)
-    place = 'california'
-    url = HOMEPAGE + place + '/' + "list_v"
-    s.driver_get(url)
-    urls = s.get_urls()
-    for idx, cell_url in enumerate(urls):
-        s.driver_get(cell_url)
-        print(s.table_data())
+    def update_date(self):
+        """return string of the last update date of the real-estate property"""
+        try:
+            last_update = self.driver.find_element_by_id("updatedListing").text
+            logging.info(f'Successfully returned on update date')
+            logging.debug(f'Update date: {last_update}')
+            return last_update
+        except NoSuchElementException as e:
+            logging.critical(f'The following error has occurred:{e}')
+            return

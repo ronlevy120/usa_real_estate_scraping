@@ -10,12 +10,23 @@ class Sql:
         self.cur = cur
         self.sc = sc
 
+    def check_duplicates(self):
+        self.cur.execute("""SELECT count(*) as count
+        FROM properties
+        WHERE reo_id = %s
+        AND mls_id = %s
+        AND update_date = %s""", [self.sc.reo_id(), self.sc.mls_id(), self.sc.update_date()])
+        if self.cur.fetchall()[0][0] == 0:
+            return True
+        return False
+
+
     def sql_properties(self):
         """Insert values into properties table"""
         self.cur.execute("""INSERT INTO properties (
-                    address, just_list, reo_id, mls_id)
-                    VALUES (%s, %s, %s, %s)""", [self.sc.full_address(), self.sc.just_listed_status(),
-                                                self.sc.reo_id(), self.sc.mls_id()])
+                    address, just_list, reo_id, mls_id, update_date )
+                    VALUES (%s, %s, %s, %s, %s)""", [self.sc.full_address(), self.sc.just_listed_status(),
+                                                self.sc.reo_id(), self.sc.mls_id(), self.sc.update_date()])
         self.last_id = self.cur.lastrowid
         print(f"last id: {self.last_id}")
 

@@ -39,21 +39,22 @@ class Tables:
         self.cur.execute('drop table if exists prop_description;')
         self.cur.execute('drop table if exists company;')
 
-
     def table_properties(self):
         """Create properties table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS properties (
          idproperties INT PRIMARY KEY AUTO_INCREMENT,
          address VARCHAR(200),
-         just_list TINYINT(4),
+         just_list VARCHAR(45),
          reo_id VARCHAR(45),
-         mls_id VARCHAR(45))
+         mls_id VARCHAR(45),
+         update_date VARCHAR (200))
         ''')
         self.cur.execute('''ALTER TABLE properties AUTO_INCREMENT = 1''')
 
     def table_agents(self):
         """Create agent table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS agents (
+        idagents INT PRIMARY KEY AUTO_INCREMENT,
         agent_name VARCHAR(45),
         agent_phone VARCHAR(45),
         idproperties INT,
@@ -64,6 +65,7 @@ class Tables:
     def table_company(self):
         """Create company table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS company (
+        idcompany INT PRIMARY KEY AUTO_INCREMENT,
         comp_name VARCHAR(45),
         comp_phone VARCHAR(45),
         comp_address VARCHAR(45),
@@ -75,9 +77,9 @@ class Tables:
     def table_prop_description(self):
         """Create prop_description table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS prop_description (
+        idprop_desc INT PRIMARY KEY AUTO_INCREMENT,
         description VARCHAR(200),
         idproperties INT(11),
-        PRIMARY KEY (idproperties),
         FOREIGN KEY (idproperties)
         REFERENCES properties (idproperties))
         ''')
@@ -85,6 +87,7 @@ class Tables:
     def table_property_detailes(self):
         """Create property_detailes table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS property_detailes (
+        idprop_details INT PRIMARY KEY AUTO_INCREMENT,
         idproperties INT(11),
         `price in us dollar` FLOAT(11),
         bedrooms FLOAT(11),
@@ -106,7 +109,6 @@ class Tables:
         HOA VARCHAR(45),
         `HOA Fees is US Dollar` INT(11),
         `Year Built` DATE,
-        PRIMARY KEY (idproperties),
         FOREIGN KEY (idproperties)
         REFERENCES properties (idproperties))
         ''')
@@ -114,12 +116,12 @@ class Tables:
     def table_Property_Tax_Roll_Details(self):
         """Create Property_Tax_Roll_Details table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS `Property_Tax_Roll_Details` (
+        idtax_details INT PRIMARY KEY AUTO_INCREMENT,
         `Elementary School` VARCHAR(45),
         `Junior High School` VARCHAR(45),
         `Senior High School` VARCHAR(45),
         Subdivision VARCHAR(45),
         idproperties INT(11),
-        PRIMARY KEY (idproperties),
         FOREIGN KEY (idproperties)
         REFERENCES `properties` (`idproperties`))
         ''')
@@ -127,6 +129,7 @@ class Tables:
     def County_Tax_Roll_Details(self):
         """Create County_Tax_Roll_Details table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS County_Tax_Roll_Details (
+        idcounty_details INT PRIMARY KEY AUTO_INCREMENT,
         Fireplaces VARCHAR(45),
         `Half Baths` INT(11),
         `Property Type` VARCHAR(45),
@@ -137,7 +140,6 @@ class Tables:
         `Land Area` FLOAT(11),
         `Num_of Stories` INT(11),
         `idproperties` INT(11),
-        PRIMARY KEY (idproperties),
         FOREIGN KEY (idproperties)
         REFERENCES `properties` (`idproperties`))
         ''')

@@ -1,14 +1,11 @@
 import os
 import urllib.request
 from datetime import datetime
-
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
-
 from myconstants import *
-from passw import *
 import logging
 
 logging.basicConfig(handlers=[logging.FileHandler('scraping.log', 'w', 'utf-8')],
@@ -16,18 +13,21 @@ logging.basicConfig(handlers=[logging.FileHandler('scraping.log', 'w', 'utf-8')]
                     datefmt='%m-%d %H:%M',
                     level=logging.INFO)
 
+
 class Scraper:
 
     def __init__(self, place, path_to_driver):
         """Initialize Scraper class. Define place and path to the web driver"""
         self.place = place
         self.path_to_driver = path_to_driver
+        self.driver = None
         logging.info(f'A scraper object was successfully made. Place: {self.place}')
 
     def create_driver(self):
         """Creates a driver with the path initialized at the init method"""
         self.driver = webdriver.Chrome(executable_path=self.path_to_driver)
         logging.info(f'A driver object was successfully made')
+
     def get_image(self, page, inner_folder):
         """
         Downloading images from a given site.
@@ -57,7 +57,6 @@ class Scraper:
         table_len = len(self.driver.find_elements(By.TAG_NAME, "td"))
         logging.debug(f'Table length: {table_len}')
         return table_len
-
 
     def driver_get(self, url):
         """Update the driver to the received url"""
@@ -198,19 +197,19 @@ class Scraper:
 
     def info_data(self):
         """
-        Get the informative data regarding the propary
+        Get the informative data regarding the property
         :return: list of table of relevant data
         """
         logging.info(f'info_data has been Successfully called')
         return self.full_address(), self.just_listed_status(), \
-               self.reo_id(), self.mls_id(), self.agent_name(),\
-               self.agent_phone(), self.agent_company_name(), \
-               self.agent_company_phone(), self.agent_company_address(), \
-               self.description()
+            self.reo_id(), self.mls_id(), self.agent_name(),\
+            self.agent_phone(), self.agent_company_name(), \
+            self.agent_company_phone(), self.agent_company_address(), \
+            self.description()
 
     def table_data(self):
         """
-        Get the data regarding the propary from all tables in that page
+        Get the data regarding the property from all tables in that page
         :return: List of tuples with the relevant data
         """
         table_values = [ele.text for ele in self.driver.find_elements_by_class_name('attr-value')]

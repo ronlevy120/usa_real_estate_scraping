@@ -1,3 +1,10 @@
+12-10 17:52-INFO-FILE:main.py-FUNC:__init__-LINE:30-An ARgParseInput object was successfully made
+12-10 17:52-INFO-FILE:main.py-FUNC:__init__-LINE:34-A places instance was successfully made out of ARgParseInput
+12-10 17:52-INFO-FILE:scraper.py-FUNC:__init__-LINE:24-A scraper object was successfully made. Place: ca
+12-10 17:52-INFO-FILE:main.py-FUNC:run-LINE:74-An instance was successfully made out of Scraper
+12-10 17:52-INFO-FILE:main.py-FUNC:run-LINE:76-An instance was successfully made out of SaveToDatabase
+12-10 17:52-INFO-FILE:scraper.py-FUNC:create_driver-LINE:29-A driver object was successfully made
+=======
 12-09 15:24-INFO-FILE:main.py-FUNC:__init__-LINE:25-An ARgParseInput object was successfully made
 12-09 15:24-INFO-FILE:main.py-FUNC:__init__-LINE:27-A places instance was successfully made out of ARgParseInput
 12-09 15:24-INFO-FILE:scraper.py-FUNC:__init__-LINE:25-A scraper object was successfully made. Place: florida

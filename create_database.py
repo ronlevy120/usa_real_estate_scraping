@@ -35,7 +35,7 @@ class Tables:
         self.cur.execute('drop table if exists agents;')
         self.cur.execute('drop table if exists County_Tax_Roll_Details;')
         self.cur.execute('drop table if exists Property_Tax_Roll_Details;')
-        self.cur.execute('drop table if exists property_detailes;')
+        self.cur.execute('drop table if exists property_details;')
         self.cur.execute('drop table if exists prop_description;')
         self.cur.execute('drop table if exists company;')
 

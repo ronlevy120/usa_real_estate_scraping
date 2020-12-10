@@ -1,5 +1,4 @@
 import mysql.connector
-
 from manager import Sql
 from passw import *
 
@@ -28,9 +27,9 @@ class SaveToDatabase:
             mn.sql_agents()
             mn.sql_company()
             mn.sql_prop_description()
-            mn.property_detailes()
-            mn.Property_Tax_Roll_Details()
-            mn.County_Tax_Roll_Details()
+            mn.property_details()
+            mn.property_tax_roll_details()
+            mn.county_tax_roll_details()
             self.db_connection.commit()
         else:
             print("Property already exist in database")

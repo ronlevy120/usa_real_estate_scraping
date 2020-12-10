@@ -1,5 +1,4 @@
 import mysql.connector
-
 from passw import *
 
 
@@ -84,7 +83,7 @@ class Tables:
         REFERENCES properties (idproperties))
         ''')
 
-    def table_property_detailes(self):
+    def table_property_details(self):
         """Create property_detailes table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS property_detailes (
         idprop_details INT PRIMARY KEY AUTO_INCREMENT,
@@ -113,7 +112,7 @@ class Tables:
         REFERENCES properties (idproperties))
         ''')
 
-    def table_Property_Tax_Roll_Details(self):
+    def table_property_tax_roll_details(self):
         """Create Property_Tax_Roll_Details table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS `Property_Tax_Roll_Details` (
         idtax_details INT PRIMARY KEY AUTO_INCREMENT,
@@ -126,7 +125,8 @@ class Tables:
         REFERENCES `properties` (`idproperties`))
         ''')
 
-    def County_Tax_Roll_Details(self):
+
+    def county_tax_roll_details(self):
         """Create County_Tax_Roll_Details table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS County_Tax_Roll_Details (
         idcounty_details INT PRIMARY KEY AUTO_INCREMENT,
@@ -153,9 +153,9 @@ if __name__ == '__main__':
     t.table_agents()
     t.table_company()
     t.table_prop_description()
-    t.table_property_detailes()
-    t.table_Property_Tax_Roll_Details()
-    t.County_Tax_Roll_Details()
+    t.table_property_details()
+    t.table_property_tax_roll_details()
+    t.county_tax_roll_details()
     db_connection = mysql.connector.connect(
         host=HOST,
         user=USER,

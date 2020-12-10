@@ -1,35 +1,103 @@
 # USA Real estate scraping
 ## Inbal Agur & Ron Levy & Ohad Hayoun
-Scraping real estate data from USA government agencies has never beem more easy.
+
+
+
+# Motivation
+Real estate data can be powerful way to make smart decisions in both international and domestic market. 
+This script allows you to achieve huge amount of data very easily.
 
 # Table of Content
 * [General info](#general-info)
-* [Technologies](#technologies) 
-* [Pre-Launch](#pre-launch)
+* [Required files](#required files)
+* [Installation](#Installation) 
+* [How to use](#How to use)
 * [Launch](#Launch)
 * [Database](#Database)
+* [ERD](#ERD)
+* [Information and support](#information and support)
 
-# General info
-Real estate data can be powerful way to make smart decisions in both international and domestic market. This script allows you to achive huge amount of data very easily. the data is taken from the following site: https://www.homepath.com/
+#General info
+Scraping real estate data from USA government agencies has never been more easy.\
+the data is taken from the following site: https://www.homepath.com/
 
-# Technologies
-To run this code, please use Python 3.x.
-We used Chrome webdriver for this project, so please download Chrome you you don't have it yet.
-You can download the webdriver from this address: https://chromedriver.chromium.org/downloads
+#Required files
+* main.py
+* manager.py
+* save_to_database.py
+* create_database.py
+* scraper.py
+* stocks_api.py
+* myconstants.py 
+* ArgParseInput.py
+* requirements.txt
+* README.md
+* .gitignore
+* chromedriver.exe (instructions below)
 
-Please make sure you have the following packages:
-* beautifulsoup4~=4.9.3
-* selenium~=3.141.0
-* mysql-connector-python~=8.0.21
 
-# Pre-Launch
-* Create a file with `database name, database path, SQLhost, SQLuser, SQLpassword, WebDriver Path`.
-* In case you are not able to install `mysql`, follow the instructions in this well-explained youtube video:
+# Installation
+
+### requirements
+To run this code, please install: 
+- `Python` 3.x.
+- `Chrome 'webdriver'` (available at: [https://chromedriver.chromium.org/downloads]("https://chromedriver.chromium.org/downloads"))
+- `mysql`  (you may follow the instructions at:
 https://www.youtube.com/watch?v=E0s9YlFHiO4&t=1s 
-* If you're still having issues with running mysql package, run the following code on the environment terminal:
-```pip install mysql-connector-python```
-# Launch (optional arguments)
+
+
+
+### packages list
+Please make sure you have the following packages installed:
+* beautifulsoup4==4.9.3
+* configparser==5.0.0
+* grequests==0.6.0
+* matplotlib==3.3.3
+* mysql-connector-python==8.0.22
+* numpy==1.19.3
+* pandas==1.1.3
+* pandas-datareader==0.9.0
+* pandas-finance==0.1.2
+* preprocessing==0.1.13
+* pycparser==2.20
+* pyparsing==2.4.7
+* requests==2.24.0
+* scipy==1.5.4
+* seaborn==0.11.0
+* selenium==3.141.0
+* SQLAlchemy==1.3.20
+* tqdm==4.52.0
+* urllib3==1.25.11
+
+
+# How to use
+### Pre-Launch
+* edit the 'myconstants.py' file:
+(crate a new file or use the file from the repository)
+
+complete the constants values as follows:
+- `HOMEPAGE` = "https://www.homepath.com/listings/"
+- `LAST_ELEMENT` = -1
+- `FULL_EXTENSTION` = 3
+- `HALF_URL` = -15
+- `DB_FILENAME` = the database file name (default = 'usa_scraping_database')
+
+* Create a new file - 'passw.py':
+this file should contain your personal info as follows:
+- `DB_PATH` = the database file full path 'C:\...'
+- `WEBDRIVER_PATH` = the webdriver file full path (example = "C:\Users\'user'\Documents\the_webdriver\chromedriver.exe")
+- `HOST` = your 'mySQL' host name. (default = 'localhost')
+- `USER` = your 'mySQL' user name. (default = 'root')
+- `PASS` = your 'mySQL' password.
+
+### Launch
+Run the program from the main.py file. 
+
+optional arguments for the main program:\
+
 usage: main.py [-h] [places] [limit] [years]
+
+arguments description:
 * -h : arguments ```help``` description
 * places : ```places``` in the US (city or states) to look for,with space between each place.
 (Default: new-york)
@@ -38,7 +106,13 @@ usage: main.py [-h] [places] [limit] [years]
           - [VGSIX] - Vanguard Real Estate Index Fund Investor Shares\
           - [FSRNX] - Fidelity Real Estate Index Fund\
           - [IYR] - iShares U.S. Real Estate ETF\
-          
+
+usage example: 'main.py los-angeles 25 10'
+
+* this will execute scraping houses data in `Los Angeles`, 
+presenting the `25` results pages, 
+plotting the US real estate main stocks performance chart for the last `10` years
+ 
  
 # Database
 The database is made of the following tables:
@@ -50,5 +124,10 @@ _* company_ - The companies where the real-estate agents works
 * _property_detailes_ - Morre details about the propery
 * _property_tax_roll_details_ - Tax details about the property
 
-## ERD
+# ERD
 ![ERD of the database](ERD.png)
+
+
+# Information and support:
+for more information and support please contact us by email:
+[ronlevy12000@gmail.com](ronlevy12000@gmail.com) , [ohadohad5@gmail.com](ohadohad5@gmail.com) 

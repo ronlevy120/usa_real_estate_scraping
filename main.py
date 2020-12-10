@@ -1,5 +1,4 @@
 import os
-
 from ArgParseInput import ArgParseInput
 from myconstants import *
 import stocks_api
@@ -22,6 +21,11 @@ class Main:
         and the limits on the search
         """
         # reading the arguments input
+        self.page = None
+        self.url = None
+        self.db = None
+        self.sc = None
+        self.place = None
         self.ar = ArgParseInput()
         logging.info(f'An ARgParseInput object was successfully made')
 
@@ -48,9 +52,8 @@ class Main:
             try:
                 stocks_api.main(self.years)
                 print(f"showing US real estate main stocks performance chart for the last {self.years} years")
-            except:
-                logging.error(f'error getting stocks_api data')
-
+            except ResourceWarning as e:
+                logging.error(f'error getting stocks_api data - ', e)
 
     @staticmethod
     def make_folder(name):
@@ -70,7 +73,7 @@ class Main:
             self.sc = Scraper(place=self.place, path_to_driver='chromedriver.exe')
             logging.info(f'An instance was successfully made out of Scraper')
             self.db = SaveToDatabase(self.sc)
-            logging.info(f'An instance was successfully made out of SavetToDatabase')
+            logging.info(f'An instance was successfully made out of SaveToDatabase')
             self.sc.create_driver()
             self.make_folder(self.place)
             self.url = HOMEPAGE + self.place + '/' + "list_v"
@@ -90,17 +93,17 @@ class Main:
         if self.page > 1:  # if it's not the first page
             self.url = HOMEPAGE + self.place + f"/{self.page}_p/list_v"
         self.sc.driver_get(self.url)
-        self.page = str(self.page)  # So we can use the page as string, later we'll change to int back
-        if not os.path.exists(os.path.join(self.place, self.page)):
-            os.mkdir(os.path.join(self.place, self.page))
+        # page_str = str(self.page)  # So we can use the page as string, later we'll change to int back
+        if not os.path.exists(os.path.join(self.place, str(self.page))):
+            os.mkdir(os.path.join(self.place, str(self.page)))
         urls = self.sc.get_urls()  # List of all the url in that page
         for idx, cell_url in enumerate(urls):
-            logging.info(f'Url from page is under proccess')
-            logging.debug(f"Page number: {self.page}")
-            inner_folder = self.sc.make_inner_folder(idx, cell_url, self.page)
+            logging.info(f'Url from page is under process')
+            logging.debug(f"Page number: {str(self.page)}")
+            inner_folder = self.sc.make_inner_folder(idx, cell_url, str(self.page))
             logging.debug(f"Image folder name:{inner_folder}")
             self.sc.driver_get(cell_url)
-            self.sc.get_image(inner_folder=inner_folder, page=self.page)
+            self.sc.get_image(inner_folder=inner_folder, page=str(self.page))
             logging.debug(f"The photos has been downloaded")
             print(self.sc.info_data())
             logging.debug(f"Info data has been processed. len: {len(self.sc.info_data())}")
@@ -109,7 +112,7 @@ class Main:
             self.db.add_data_to_database()  # Making SQL Query from the data
             logging.info(f"Success! data has been inserted into SQL tables")
         self.sc.driver_get(self.url)
-        print(f"End of loop {self.page}")
+        print(f"End of loop {str(self.page) }")
         self.page = int(self.page)
         self.page += 1
 

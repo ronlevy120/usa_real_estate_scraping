@@ -6,13 +6,14 @@ class Sql:
         """
         self.cur = cur
         self.sc = sc
+        self.last_id = None
 
     def sql_properties(self):
         """Insert values into properties table"""
         self.cur.execute("""INSERT INTO properties (
                     address, just_list, reo_id, mls_id)
                     VALUES (%s, %s, %s, %s)""", [self.sc.full_address(), self.sc.just_listed_status(),
-                                                self.sc.reo_id(), self.sc.mls_id()])
+                                                 self.sc.reo_id(), self.sc.mls_id()])
         self.last_id = self.cur.lastrowid
         print(f"last id: {self.last_id}")
 
@@ -34,8 +35,8 @@ class Sql:
             description, idproperties)
             VALUES (%s, %s)""", [self.sc.description(), self.last_id])
 
-    def property_detailes(self):
-        """Insert values into property_detailes table"""
+    def property_details(self):
+        """Insert values into property_details table"""
         data_dict = self.sc.table_data()
         basement = price = bedrooms = bathrooms = full_bath = garage = living_area = lot_size = exterior =\
             flooring = air_conditioning = utilities = pool = sewer_type = HOA = HOA_fees = year_built = None
@@ -73,19 +74,20 @@ class Sql:
             HOA_fees = data_dict['HOA Fees']
         if 'Year Built' in data_dict:
             year_built = data_dict['Year Built']
-        self.cur.execute("""INSERT INTO property_detailes (
+        self.cur.execute("""INSERT INTO property_details (
                     idproperties, `price in us dollar`, Bedrooms, Bathrooms,
                     `Full Baths`, `Garage Description`, `Basement`, `Living Area Size`,
                     `Lot Size in acres`, `Exterior`, `Flooring`,
                     `Air Conditioning`, `Utilities`, `Pool`, `Sewer Type`, `HOA`,
                     `HOA Fees is US Dollar`, `Year Built`)
                     VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,
-                     %s, %s, %s, %s, %s, %s, %s)""", [self.last_id, price, bedrooms, bathrooms, full_bath, garage,
-                     basement, living_area, lot_size, exterior, flooring, air_conditioning,
-                     utilities, pool, sewer_type, HOA, HOA_fees, year_built])
+                    %s, %s, %s, %s, %s, %s, %s)""",
+                         [self.last_id, price, bedrooms, bathrooms, full_bath, garage,
+                          basement, living_area, lot_size, exterior, flooring, air_conditioning,
+                          utilities, pool, sewer_type, HOA, HOA_fees, year_built])
 
-    def Property_Tax_Roll_Details(self):
-        """Insert values into Property_Tax_Roll_Details table"""
+    def property_tax_roll_details(self):
+        """Insert values into property_tax_roll_details table"""
         data_dict = self.sc.table_data()
         junior_high_School = elementary_school = senior_high_school = subdivision = None
         if 'Elementary School' in data_dict:
@@ -96,14 +98,14 @@ class Sql:
             senior_high_school = data_dict['Senior High School']
         if 'Subdivision' in data_dict:
             subdivision = data_dict['Subdivision']
-        self.cur.execute("""INSERT INTO Property_Tax_Roll_Details (
+        self.cur.execute("""INSERT INTO property_tax_roll_details (
         idproperties, `Elementary School`, `Junior High School`, `Senior High School`,
         `Subdivision`)
         VALUES (%s, %s, %s, %s, %s)""", [self.last_id, elementary_school,
                                          junior_high_School, senior_high_school, subdivision])
 
-    def County_Tax_Roll_Details(self):
-        """Insert values into County_Tax_Roll_Details table"""
+    def county_tax_roll_details(self):
+        """Insert values into county_tax_roll_details table"""
         data_dict = self.sc.table_data()
         ac = bedrooms = fire = half_b = prop_type = apn = bath =\
             const_type = full_bath = land_area = num_stories = None
@@ -129,7 +131,7 @@ class Sql:
             land_area = data_dict['Land Area']
         if 'No. of Stories' in data_dict:
             num_stories = data_dict['No. of Stories']
-        self.cur.execute("""INSERT INTO County_Tax_Roll_Details (
+        self.cur.execute("""INSERT INTO county_tax_roll_details (
             idproperties, `Air Conditioning`,
             `Bedrooms`, `Fireplaces`, `Half Baths`,
             `Property Type`, `APN`, `Baths`, `Construction Type`, `Full Baths`,

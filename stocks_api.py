@@ -1,19 +1,17 @@
-# ! pip install pandas_datareader
-
-import numpy as np
 import pandas as pd
 import pandas_datareader.data as web
-from datetime import datetime,timedelta, date
-import itertools as it
-import math
+from datetime import datetime, timedelta, date
 from typing import List
+import logging
 import matplotlib.pyplot as plt
 from pandas.plotting import register_matplotlib_converters
 register_matplotlib_converters()
 
 
 class PortfolioBuilder:
+    """
 
+    """
     def __init__(self):
         self.tickers_list = []
         self.amount_of_stocks = 0
@@ -35,38 +33,40 @@ class PortfolioBuilder:
         :return: daily adjusted close price data as a pandas DataFrame
         :rtype: pd.DataFrame
 
-        example call: get_daily_data(['GOOG', 'INTC', 'MSFT', 'AAPL'], date(2018, 12, 31), date(2019, 12, 31))
         """
         self.tickers_list = tickers_list
         self.amount_of_stocks = len(tickers_list)
         try:
             self.my_df = web.DataReader(self.tickers_list, start=start_date, end=end_date, data_source="yahoo")[
                 'Adj Close']
-            my_df = my_df.reindex(my_df.mean().sort_values().index[::], axis="columns")
-            my_df.head()
-        except:
-            Exception
-        self.my_df = self.my_df.reindex(self.my_df.mean().sort_values().index[::-1], axis="columns")
+            # my_df = my_df.reindex(my_df.mean().sort_values().index[::], axis="columns")
+            # my_df.head()
+        except ResourceWarning as e:
+            logging.error(f'error getting stocks_api data', exc_info=True)
+        else:
+            self.my_df = self.my_df.reindex(self.my_df.mean().sort_values().index[::-1], axis="columns")
         return self.my_df
 
 
 def print_chart(df):
     stocks_symbol_list = df.columns.values.tolist()
 
-    f = plt.figure(figsize=(10, 6))
+    fig = plt.figure(figsize=(10, 6))
 
     for i in stocks_symbol_list:
         plt.plot(df[i])
-        plt.title("US real estate main stocks performance chart" )
+        plt.title("US real estate main stocks performance chart")
         plt.xlabel("Date")
         plt.ylabel("Price")
         plt.xticks()
     plt.legend(stocks_symbol_list)
     plt.ion()
     plt.show()
-    plt.pause(4)
+    plt.pause(5)
 
-def get_stocks_data(stocks_symbol_list,years):
+
+# noinspection PyTypeChecker
+def get_stocks_data(stocks_symbol_list, years):
     # creating the PortfolioBuilder class object
     pb = PortfolioBuilder()
 
@@ -79,7 +79,8 @@ def get_stocks_data(stocks_symbol_list,years):
 
     return df
 
-def main(years = 5):
+
+def main(years=5):
     stocks_symbol_list = ['VGSIX', 'FSRNX', 'IYR']
     stocks_df = get_stocks_data(stocks_symbol_list, years)
     print_chart(stocks_df)
@@ -87,6 +88,3 @@ def main(years = 5):
 
 if __name__ == '__main__':
     main()
-
-
-

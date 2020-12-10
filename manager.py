@@ -25,7 +25,6 @@ class Sql:
     def sql_properties(self):
         """Insert values into properties table"""
         self.cur.execute("""INSERT INTO properties (
-=======
                     address, just_list, reo_id, mls_id, update_date )
                     VALUES (%s, %s, %s, %s, %s)""", [self.sc.full_address(), self.sc.just_listed_status(),
                                                 self.sc.reo_id(), self.sc.mls_id(), self.sc.update_date()])
@@ -53,7 +52,13 @@ class Sql:
     def property_details(self):
         """Insert values into property_details table"""
         data_dict = self.sc.table_data()
-=======
+        self.cur.execute("""INSERT INTO property_detailes (
+                    idproperties, `price in us dollar`, Bedrooms, Bathrooms,
+                    `Full Baths`, `Garage Description`, `Basement`, `Living Area Size`,
+                    `Lot Size in acres`, `Exterior`, `Flooring`,
+                    `Air Conditioning`, `Utilities`, `Pool`, `Sewer Type`, `HOA`,
+                    `HOA Fees is US Dollar`, `Year Built`)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,
                      %s, %s, %s, %s, %s, %s, %s)""", [self.last_id, price(data_dict), bedrooms(data_dict),
                                                       bathrooms(data_dict), full_bath(data_dict), gar(data_dict),
                                                       bsm(data_dict), living(data_dict), lot_size(data_dict),
@@ -64,8 +69,7 @@ class Sql:
     def property_tax_roll_details(self):
         """Insert values into property_tax_roll_details table"""
         data_dict = self.sc.table_data()
-=======
-        self.cur.execute("""INSERT INTO Property_Tax_Roll_Details (
+        self.cur.execute("""INSERT INTO property_tax_roll_details (
         idproperties, `Elementary School`, `Junior High School`, `Senior High School`,
         `Subdivision`)
         VALUES (%s, %s, %s, %s, %s)""", [self.last_id, elementary_school(data_dict),

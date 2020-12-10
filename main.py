@@ -1,6 +1,7 @@
 import os
 from ArgParseInput import ArgParseInput
 from myconstants import *
+from passw import *
 import stocks_api
 from save_to_database import SaveToDatabase
 from scraper import Scraper
@@ -70,7 +71,7 @@ class Main:
         """Running the program with the imported modules"""
         for self.place in self.places:
             print(f"Looking for results in: {self.place}")
-            self.sc = Scraper(place=self.place, path_to_driver='chromedriver.exe')
+            self.sc = Scraper(place=self.place, path_to_driver=WEBDRIVER_PATH)
             logging.info(f'An instance was successfully made out of Scraper')
             self.db = SaveToDatabase(self.sc)
             logging.info(f'An instance was successfully made out of SaveToDatabase')

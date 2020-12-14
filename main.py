@@ -1,8 +1,8 @@
 import os
-
 from ArgParseInput import ArgParseInput
 from myconstants import *
 from passw import *
+import stocks_api
 from save_to_database import SaveToDatabase
 from scraper import Scraper
 import logging
@@ -21,16 +21,40 @@ class Main:
         Defines sc as the Scraper class object, ar as the ArgParseInput class object,
         and the limits on the search
         """
+        # reading the arguments input
+        self.page = None
+        self.url = None
+        self.db = None
+        self.sc = None
+        self.place = None
         self.ar = ArgParseInput()
         logging.info(f'An ARgParseInput object was successfully made')
+
+        # getting the places argument (list)
         self.places = self.ar.argp()[0]  # scrap those places
         logging.info(f'A places instance was successfully made out of ARgParseInput')
         logging.debug(f'Places len: {len(self.places)}')
+
+        # getting the search_limit argument
         self.search_limit = self.ar.argp()[1]
         logging.debug(f'Search limit: {self.search_limit}')
         if self.search_limit == 9999:
             self.search_limit = 'Unlimited search'
         print(f"limit pages up to page number: {self.search_limit}")
+
+        # getting the years argument (for the stocks chart)
+        self.years = self.ar.argp()[2]
+        logging.debug(f'years: {self.years}')
+        if self.years < 1 or self.years > 50:
+            print(f"error showing US real estate main stocks performance chart for the last {self.years} years "
+                  f"\ninvalid input - should be an integer between [1-50]")
+            logging.error(f'invalid input: {self.years}, should be an integer between [1-50]')
+        else:
+            try:
+                stocks_api.main(self.years)
+                print(f"showing US real estate main stocks performance chart for the last {self.years} years")
+            except ResourceWarning as e:
+                logging.error(f'error getting stocks_api data - ', e)
 
     @staticmethod
     def make_folder(name):
@@ -50,7 +74,7 @@ class Main:
             self.sc = Scraper(place=self.place, path_to_driver=WEBDRIVER_PATH)
             logging.info(f'An instance was successfully made out of Scraper')
             self.db = SaveToDatabase(self.sc)
-            logging.info(f'An instance was successfully made out of SavetToDatabase')
+            logging.info(f'An instance was successfully made out of SaveToDatabase')
             self.sc.create_driver()
             self.make_folder(self.place)
             self.url = HOMEPAGE + self.place + '/' + "list_v"
@@ -70,17 +94,17 @@ class Main:
         if self.page > 1:  # if it's not the first page
             self.url = HOMEPAGE + self.place + f"/{self.page}_p/list_v"
         self.sc.driver_get(self.url)
-        self.page = str(self.page)  # So we can use the page as string, later we'll change to int back
-        if not os.path.exists(os.path.join(self.place, self.page)):
-            os.mkdir(os.path.join(self.place, self.page))
+        # page_str = str(self.page)  # So we can use the page as string, later we'll change to int back
+        if not os.path.exists(os.path.join(self.place, str(self.page))):
+            os.mkdir(os.path.join(self.place, str(self.page)))
         urls = self.sc.get_urls()  # List of all the url in that page
         for idx, cell_url in enumerate(urls):
-            logging.info(f'Url from page is under proccess')
-            logging.debug(f"Page number: {self.page}")
-            inner_folder = self.sc.make_inner_folder(idx, cell_url, self.page)
+            logging.info(f'Url from page is under process')
+            logging.debug(f"Page number: {str(self.page)}")
+            inner_folder = self.sc.make_inner_folder(idx, cell_url, str(self.page))
             logging.debug(f"Image folder name:{inner_folder}")
             self.sc.driver_get(cell_url)
-            self.sc.get_image(inner_folder=inner_folder, page=self.page)
+            self.sc.get_image(inner_folder=inner_folder, page=str(self.page))
             logging.debug(f"The photos has been downloaded")
             print(self.sc.info_data())
             logging.debug(f"Info data has been processed. len: {len(self.sc.info_data())}")
@@ -89,11 +113,10 @@ class Main:
             self.db.add_data_to_database()  # Making SQL Query from the data
             logging.info(f"Success! data has been inserted into SQL tables")
         self.sc.driver_get(self.url)
-        print(f"End of loop {self.page}")
+        print(f"End of loop {str(self.page) }")
         self.page = int(self.page)
         self.page += 1
 
 
-if __name__ == '__main__':
-    main = Main()
-    main.run()
+main = Main()
+main.run()

@@ -9,13 +9,25 @@ class Sql:
         """
         self.cur = cur
         self.sc = sc
+        self.last_id = None
+
+    def check_duplicates(self):
+        self.cur.execute("""SELECT count(*) as count
+        FROM properties
+        WHERE reo_id = %s
+        AND mls_id = %s
+        AND update_date = %s""", [self.sc.reo_id(), self.sc.mls_id(), self.sc.update_date()])
+        if self.cur.fetchall()[0][0] == 0:
+            return True
+        return False
+
 
     def sql_properties(self):
         """Insert values into properties table"""
         self.cur.execute("""INSERT INTO properties (
-                    address, just_list, reo_id, mls_id)
-                    VALUES (%s, %s, %s, %s)""", [self.sc.full_address(), self.sc.just_listed_status(),
-                                                self.sc.reo_id(), self.sc.mls_id()])
+                    address, just_list, reo_id, mls_id, update_date )
+                    VALUES (%s, %s, %s, %s, %s)""", [self.sc.full_address(), self.sc.just_listed_status(),
+                                                self.sc.reo_id(), self.sc.mls_id(), self.sc.update_date()])
         self.last_id = self.cur.lastrowid
         print(f"last id: {self.last_id}")
 
@@ -37,8 +49,8 @@ class Sql:
             description, idproperties)
             VALUES (%s, %s)""", [self.sc.description(), self.last_id])
 
-    def property_detailes(self):
-        """Insert values into property_detailes table"""
+    def property_details(self):
+        """Insert values into property_details table"""
         data_dict = self.sc.table_data()
         self.cur.execute("""INSERT INTO property_detailes (
                     idproperties, `price in us dollar`, Bedrooms, Bathrooms,
@@ -54,19 +66,19 @@ class Sql:
                                                       util(data_dict), pool(data_dict), sewer(data_dict), hoa(data_dict),
                                                       hoa_fees(data_dict), year_built(data_dict)])
 
-    def Property_Tax_Roll_Details(self):
-        """Insert values into Property_Tax_Roll_Details table"""
+    def property_tax_roll_details(self):
+        """Insert values into property_tax_roll_details table"""
         data_dict = self.sc.table_data()
-        self.cur.execute("""INSERT INTO Property_Tax_Roll_Details (
+        self.cur.execute("""INSERT INTO property_tax_roll_details (
         idproperties, `Elementary School`, `Junior High School`, `Senior High School`,
         `Subdivision`)
         VALUES (%s, %s, %s, %s, %s)""", [self.last_id, elementary_school(data_dict),
                                          junior_high_School(data_dict), senior_high_school(data_dict), subdivision(data_dict)])
 
-    def County_Tax_Roll_Details(self):
-        """Insert values into County_Tax_Roll_Details table"""
+    def county_tax_roll_details(self):
+        """Insert values into county_tax_roll_details table"""
         data_dict = self.sc.table_data()
-        self.cur.execute("""INSERT INTO County_Tax_Roll_Details (
+        self.cur.execute("""INSERT INTO county_tax_roll_details (
             idproperties, `Fireplaces`, `Half Baths`,
             `Property Type`, `APN`, `Baths`, `Construction Type`,
             `Land Area`, `Num_of Stories`)

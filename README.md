@@ -9,13 +9,13 @@ This script allows you to achieve huge amount of data very easily.
 
 # Table of Content
 * [General info](#general-info)
-* [Required files](#required files)
+* [Required files](#required-files)
 * [Installation](#Installation) 
-* [How to use](#How to use)
+* [How to use](#How-to-use)
 * [Launch](#Launch)
 * [Database](#Database)
 * [ERD](#ERD)
-* [Information and support](#information and support)
+* [Information and support](#information-and-support)
 
 #General info
 Scraping real estate data from USA government agencies has never been more easy.\

@@ -6,6 +6,7 @@ import stocks_api
 from save_to_database import SaveToDatabase
 from scraper import Scraper
 import logging
+import passw
 
 logging.basicConfig(handlers=[logging.FileHandler('scraping.log', 'w', 'utf-8')],
                     format="%(asctime)s-%(levelname)s-FILE:%(filename)s-FUNC:%(funcName)s-LINE:%(lineno)d-%(message)s",
@@ -71,7 +72,9 @@ class Main:
         """Running the program with the imported modules"""
         for self.place in self.places:
             print(f"Looking for results in: {self.place}")
+            
             self.sc = Scraper(place=self.place, path_to_driver=WEBDRIVER_PATH)
+
             logging.info(f'An instance was successfully made out of Scraper')
             self.db = SaveToDatabase(self.sc)
             logging.info(f'An instance was successfully made out of SaveToDatabase')

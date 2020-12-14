@@ -53,6 +53,7 @@ class Sql:
         """Insert values into property_details table"""
         data_dict = self.sc.table_data()
         self.cur.execute("""INSERT INTO property_detailes (
+
                     idproperties, `price in us dollar`, Bedrooms, Bathrooms,
                     `Full Baths`, `Garage Description`, `Basement`, `Living Area Size`,
                     `Lot Size in acres`, `Exterior`, `Flooring`,
@@ -69,6 +70,7 @@ class Sql:
     def property_tax_roll_details(self):
         """Insert values into property_tax_roll_details table"""
         data_dict = self.sc.table_data()
+
         self.cur.execute("""INSERT INTO property_tax_roll_details (
         idproperties, `Elementary School`, `Junior High School`, `Senior High School`,
         `Subdivision`)

@@ -130,7 +130,6 @@ class Tables:
         REFERENCES `properties` (`idproperties`))
         ''')
 
-
     def county_tax_roll_details(self):
         """Create County_Tax_Roll_Details table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS County_Tax_Roll_Details (

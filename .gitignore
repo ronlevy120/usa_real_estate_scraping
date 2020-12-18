@@ -5,3 +5,4 @@
 .idea/usa_real_estate_scraping.iml
 .idea/vcs.xml
 __pycache__/
+!/debug.log

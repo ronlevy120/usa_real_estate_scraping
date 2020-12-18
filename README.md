@@ -106,6 +106,12 @@ arguments description:
           - [VGSIX] - Vanguard Real Estate Index Fund Investor Shares\
           - [FSRNX] - Fidelity Real Estate Index Fund\
           - [IYR] - iShares U.S. Real Estate ETF\
+          - [USRT] - iShares Core U.S. REIT ETF\
+          - [XLRE] - The Real Estate Select Sector SPDR Fund\
+          - [REET] - iShares Global REIT ETF\
+          - [VNQ] - Vanguard Real Estate Index Fund ETF Shares\
+          - [RWR] - SPDR Dow Jones REIT ETF\
+
 
 usage example: 'main.py los-angeles 25 10'
 
@@ -116,13 +122,85 @@ plotting the US real estate main stocks performance chart for the last `10` year
  
 # Database
 The database is made of the following tables:
-* _agents_ - Real-estates agents who sale the properties in the databse
-_* company_ - The companies where the real-estate agents works
-* _county_tax_roll_details_ - County details about the properties
-* _prop_description'_ - Description about the property
-* _properties_ - a table of all properties. This table auto increment id is a foreign key for al tables
-* _property_detailes_ - Morre details about the propery
-* _property_tax_roll_details_ - Tax details about the property
+1. _agents_ - Real-estates agents who sale the properties in the databse
+2. _company_ - The companies where the real-estate agents works
+3. _county_tax_roll_details_ - County details about the properties
+4. _prop_description'_ - Description about the property
+5. _properties_ - a table of all properties. This table auto increment id is a foreign key for al tables
+6. _property_detailes_ - Morre details about the propery
+7. _property_tax_roll_details_ - Tax details about the property
+
+## Database tables structure
+##### 1. agents
+* idagents INT PRIMARY KEY AUTO_INCREMENT
+* agent_name VARCHAR(45)
+* agent_phone VARCHAR(45)
+* idproperties INT
+
+##### 2. company
+* idcompany INT PRIMARY KEY AUTO_INCREMENT
+* comp_name VARCHAR(45)
+* comp_phone VARCHAR(45)
+* comp_address VARCHAR(45)
+* idproperties INT(11)
+
+##### 3. county_tax_roll_details
+* idcounty_details INT PRIMARY KEY AUTO_INCREMENT
+* Fireplaces VARCHAR(45)
+* Half Baths INT(11)
+* Property Type VARCHAR(45)
+* APN VARCHAR(45)
+* Baths FLOAT(11)
+* Construction Type VARCHAR(45)
+* Full Baths INT(11)
+* Land Area FLOAT(11)
+* Num_of Stories INT(11)
+* idproperties INT(11)
+
+##### 4. prop_description
+* idprop_desc INT PRIMARY KEY AUTO_INCREMENT
+* description VARCHAR(200)
+* idproperties INT(11)
+
+##### 5. properties
+* idproperties INT PRIMARY KEY AUTO_INCREMENT
+* address VARCHAR(200)
+* just_list VARCHAR(45)
+* reo_id VARCHAR(45)
+* mls_id VARCHAR(45)
+* update_date VARCHAR (200)
+
+##### 6. property_detailes
+* idprop_details INT PRIMARY KEY AUTO_INCREMENT
+* idproperties INT(11)
+* price in us dollar FLOAT(11)
+* bedrooms FLOAT(11)
+* Bathrooms FLOAT(11)
+* Full Baths INT(11)
+* Garage Description VARCHAR(45)
+* Basement VARCHAR(45)
+* Total Rooms FLOAT(11)
+* Living Area Size FLOAT(11)
+* Lot Size in acres FLOAT(11)
+* Style VARCHAR(45)
+* Exterior VARCHAR(45)
+* Roof VARCHAR(45)
+* Flooring VARCHAR(45)
+* Air Conditioning VARCHAR(45)
+* Utilities VARCHAR(45)
+* Pool VARCHAR(45)
+* Sewer Type VARCHAR(45)
+* HOA VARCHAR(45)
+* HOA Fees is US Dollar INT(11)
+* Year Built DATE
+
+##### 7. property_tax_roll_details
+* idtax_details INT PRIMARY KEY AUTO_INCREMENT
+* Elementary School VARCHAR(45)
+* Junior High School VARCHAR(45)
+* Senior High School VARCHAR(45)
+* Subdivision VARCHAR(45)
+* idproperties INT(11)
 
 # ERD
 ![ERD of the database](ERD.png)

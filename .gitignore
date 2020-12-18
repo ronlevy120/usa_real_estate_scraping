@@ -1,19 +1,7 @@
-
-passw.py
-Daily Stocks Data.ipynb
-myconstants - Copy.py
-chromedriver.exe
-.idea/.gitignore
-.idea/.name
+!/passw.py
 .idea/inspectionProfiles/
 .idea/misc.xml
 .idea/modules.xml
 .idea/usa_real_estate_scraping.iml
 .idea/vcs.xml
-.ipynb_checkpoints/
-Daily Stocks Data.ipynb
 __pycache__/
-chromedriver.exe
-myconstants - Copy.py
-new-york/
-

@@ -1,8 +1,8 @@
-from detailes_cond import *
-
+from detailes_cond import Utility
+from stocks_api import PortfolioBuilder
 
 class Sql:
-    def __init__(self, cur, sc):
+    def __init__(self, cur, sc=None):
         """
         Initialize Sql class.
         Defines sc as the Scraper class object and the cursor as cur
@@ -60,12 +60,13 @@ class Sql:
                     `Air Conditioning`, `Utilities`, `Pool`, `Sewer Type`, `HOA`,
                     `HOA Fees is US Dollar`, `Year Built`)
                     VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,
-                     %s, %s, %s, %s, %s, %s, %s)""", [self.last_id, price(data_dict), bedrooms(data_dict),
-                                                      bathrooms(data_dict), full_bath(data_dict), gar(data_dict),
-                                                      bsm(data_dict), living(data_dict), lot_size(data_dict),
-                                                      ext(data_dict), flooring(data_dict), ac(data_dict),
-                                                      util(data_dict), pool(data_dict), sewer(data_dict), hoa(data_dict),
-                                                      hoa_fees(data_dict), year_built(data_dict)])
+                     %s, %s, %s, %s, %s, %s, %s)""", [self.last_id, Utility.price(data_dict), Utility.bedrooms(data_dict),
+                                                      Utility.bathrooms(data_dict), Utility.full_bath(data_dict), Utility.gar(data_dict),
+                                                      Utility.bsm(data_dict), Utility.living(data_dict), Utility.lot_size(data_dict),
+                                                      Utility.ext(data_dict), Utility.flooring(data_dict), Utility.ac(data_dict),
+                                                      Utility.util(data_dict), Utility.pool(data_dict),
+                                                      Utility.sewer(data_dict), Utility.hoa(data_dict),
+                                                      Utility.hoa_fees(data_dict), Utility.year_built(data_dict)])
 
     def property_tax_roll_details(self):
         """Insert values into property_tax_roll_details table"""
@@ -74,8 +75,9 @@ class Sql:
         self.cur.execute("""INSERT INTO property_tax_roll_details (
         idproperties, `Elementary School`, `Junior High School`, `Senior High School`,
         `Subdivision`)
-        VALUES (%s, %s, %s, %s, %s)""", [self.last_id, elementary_school(data_dict),
-                                         junior_high_School(data_dict), senior_high_school(data_dict), subdivision(data_dict)])
+        VALUES (%s, %s, %s, %s, %s)""", [self.last_id, Utility.elementary_school(data_dict),
+                                         Utility.junior_high_school(data_dict), Utility.senior_high_school(data_dict),
+                                         Utility.subdivision(data_dict)])
 
     def county_tax_roll_details(self):
         """Insert values into county_tax_roll_details table"""
@@ -84,7 +86,15 @@ class Sql:
             idproperties, `Fireplaces`, `Half Baths`,
             `Property Type`, `APN`, `Baths`, `Construction Type`,
             `Land Area`, `Num_of Stories`)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)""", [self.last_id, fire(data_dict), half_b(data_dict),
-                                                                         prop_type(data_dict), apn(data_dict),
-                                                                         bath(data_dict), const_type(data_dict),
-                                                                         land_area(data_dict), stories(data_dict)])
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)""", [self.last_id, Utility.fire(data_dict), Utility.half_b(data_dict),
+                                                                         Utility.prop_type(data_dict), Utility.apn(data_dict),
+                                                                         Utility.bath(data_dict), Utility.const_type(data_dict),
+                                                                         Utility.land_area(data_dict), Utility.stories(data_dict)])
+
+    def stocks(self, years):
+        self.pb = PortfolioBuilder(years)
+        avg_yield, stocks_symbol_list, from_date, to_date = self.pb.average_yield()
+        self.cur.execute("""INSERT INTO funds (
+        `yield_over_years %`, funds_companies, from_date, to_date)
+                   VALUES (%s, %s, %s, %s)""",
+                         [float(avg_yield), " ,".join(stocks_symbol_list), from_date, to_date])

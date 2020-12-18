@@ -155,6 +155,10 @@ Average yield among selected stocks: {self.pb.average_yield()[0]} %""")
             passwd=PASS,
             database="usa_scraping_database")
         cur = db_connection.cursor()
+
+        # test for aws server permissionsoption
+        # cur.execute("GRANT ALL PRIVILEGES ON mynewdatabase.* TO 'myuser'@'localhost' WITH GRANT OPTION;")
+
         cur.execute("SHOW TABLES")
         print("TABLES IN THE DATABASE:")
         for table in cur:

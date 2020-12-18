@@ -1,19 +1,24 @@
 import mysql.connector
+
 from passw import *
 
 
-class CreateDB:
+class NewDB:
     """
     CreateDB class removing old database name 'usa_scraping_database' if exist, and creates a new one
     """
-    db_connection = mysql.connector.connect(
-        host=HOST,
-        user=USER,
-        passwd=PASS)
+    def __init__(self):
+        self.db_connection = mysql.connector.connect(
+            host=HOST,
+            user=USER,
+            passwd=PASS)
+        self.db_cursor = self.db_connection.cursor()
 
-    db_cursor = db_connection.cursor()
-    db_cursor.execute("DROP DATABASE IF EXISTS usa_scraping_database;")
-    db_cursor.execute("CREATE DATABASE IF NOT EXISTS usa_scraping_database;")
+    def create_new(self):
+        self.db_cursor.execute("CREATE DATABASE IF NOT EXISTS usa_scraping_database;")
+
+    def delete_old(self):
+        self.db_cursor.execute("DROP DATABASE IF EXISTS usa_scraping_database;")
 
 
 class Tables:
@@ -144,24 +149,16 @@ class Tables:
         REFERENCES `properties` (`idproperties`))
         ''')
 
-
-if __name__ == '__main__':
-    CreateDB()
-    t = Tables()
-    t.drop_tables_if_exist()
-    t.table_properties()
-    t.table_agents()
-    t.table_company()
-    t.table_prop_description()
-    t.table_property_details()
-    t.table_property_tax_roll_details()
-    t.county_tax_roll_details()
-    db_connection = mysql.connector.connect(
-        host=HOST,
-        user=USER,
-        passwd=PASS,
-        database="usa_scraping_database")
-    cur = db_connection.cursor()
-    cur.execute("SHOW TABLES")
-    for table in cur:
-        print(table)
+    def real_estate_funds(self):
+        """
+        Create table with the return of real estate funds over the years.
+        The idea is the real estate investors will find it very useful to compare
+        the yield over property against the stock change.
+        """
+        self.cur.execute('''CREATE TABLE IF NOT EXISTS funds (
+        idfunds INT PRIMARY KEY AUTO_INCREMENT,
+        `yield_over_years %` FLOAT(11),
+        funds_companies VARCHAR(200),
+        from_date DATE,
+        to_date DATE)
+        ''')

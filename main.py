@@ -1,11 +1,15 @@
+import logging
 import os
+
+import mysql.connector
+
 from ArgParseInput import ArgParseInput
+from create_database import NewDB, Tables
 from myconstants import *
 from passw import *
-import stocks_api
 from save_to_database import SaveToDatabase
 from scraper import Scraper
-import logging
+from stocks_api import PortfolioBuilder
 
 logging.basicConfig(handlers=[logging.FileHandler('scraping.log', 'w', 'utf-8')],
                     format="%(asctime)s-%(levelname)s-FILE:%(filename)s-FUNC:%(funcName)s-LINE:%(lineno)d-%(message)s",
@@ -30,6 +34,9 @@ class Main:
         self.ar = ArgParseInput()
         logging.info(f'An ARgParseInput object was successfully made')
 
+        self.restart = self.ar.argp()[3]
+        self.database()
+
         # getting the places argument (list)
         self.places = self.ar.argp()[0]  # scrap those places
         logging.info(f'A places instance was successfully made out of ARgParseInput')
@@ -51,10 +58,15 @@ class Main:
             logging.error(f'invalid input: {self.years}, should be an integer between [1-50]')
         else:
             try:
-                stocks_api.main(self.years)
-                print(f"showing US real estate main stocks performance chart for the last {self.years} years")
+                SaveToDatabase().add_stocks(self.years)
+                logging.debug(f'stocks data was added the database with the following yearS: {self.years}')
+                self.pb = PortfolioBuilder(self.years)
+                self.pb.print_chart()
+                print(f"""showing US real estate main stocks performance chart for the last {self.years} years.
+Average yield among selected stocks: {self.pb.average_yield()[0]} %""")
             except ResourceWarning as e:
                 logging.error(f'error getting stocks_api data - ', e)
+
 
     @staticmethod
     def make_folder(name):
@@ -65,6 +77,7 @@ class Main:
         """
         if not os.path.exists(name):
             os.mkdir(name)
+
             logging.info(f'A folder has been made. Folder name: {name}')
 
     def run(self):
@@ -117,6 +130,34 @@ class Main:
         self.page = int(self.page)
         self.page += 1
 
+    def database(self):
+        ndb = NewDB()
+        if self.restart == 'restart':
+            print("Restarting database")
+            ndb.delete_old()
+        ndb.create_new()
+        t = Tables()
+        t.drop_tables_if_exist()
+        t.table_properties()
+        t.table_agents()
+        t.table_company()
+        t.table_prop_description()
+        t.table_property_details()
+        t.table_property_tax_roll_details()
+        t.county_tax_roll_details()
+        t.real_estate_funds()
+        db_connection = mysql.connector.connect(
+            host=HOST,
+            user=USER,
+            passwd=PASS,
+            database="usa_scraping_database")
+        cur = db_connection.cursor()
+        cur.execute("SHOW TABLES")
+        print("TABLES IN THE DATABASE:")
+        for table in cur:
+            print(table)
 
-main = Main()
-main.run()
+
+if __name__ == '__main__':
+    main = Main()
+    main.run()

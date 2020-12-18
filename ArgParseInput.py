@@ -17,7 +17,8 @@ class ArgParseInput:
 
         parser.add_argument('years', type=int, nargs='?', default=0,
                             help="presents the US real estate main stocks performance chart for the last N years")
-        parser.add_argument('restart_data', type=str, nargs='?', default="do not restart",
+
+        parser.add_argument('restart_data',const='do-not-restart', type=str, nargs='?', default="do-not-restart",
                             choices=['restart', 'do-not-restart'],
                                 help="Choose whether to delete old observations or not")
 

@@ -7,12 +7,16 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from myconstants import *
 import logging
+import os, ssl
 
 
 logging.basicConfig(handlers=[logging.FileHandler('scraping.log', 'w', 'utf-8')],
                     format="%(asctime)s-%(levelname)s-FILE:%(filename)s-FUNC:%(funcName)s-LINE:%(lineno)d-%(message)s",
                     datefmt='%m-%d %H:%M',
                     level=logging.INFO)
+if (not os.environ.get('PYTHONHTTPSVERIFY', '') and
+        getattr(ssl, '_create_unverified_context', None)):
+    ssl._create_default_https_context = ssl._create_unverified_context()
 
 
 class Scraper:
@@ -36,23 +40,23 @@ class Scraper:
         :param page the current page in the site the scraper is working on
         :return: None. That function is just downloading the images
         """
-        soup = BeautifulSoup(self.driver.page_source, 'html.parser')
-        img_tags = soup.find_all('img')
-        img_urls = [img['src'] for img in img_tags]
-        for j, img in enumerate(img_urls):  # All images from that location
-            extension = img.split('.')[LAST_ELEMENT][:FULL_EXTENSTION]
-            if extension == 'net':
-                extension = 'png'
-            elif extension == 'jpe':
-                extension = 'jpeg'
-            file_name = f"img_{j}." + extension
-            try:
-                urllib.request.urlretrieve(img, os.path.join(self.place, page, inner_folder, file_name))
-                logging.info(f'An image was successfully downloaded. File name: {file_name}')
-            except ValueError as e:
-                logging.critical(f'The following error has occurred:{e}')
-                pass
-
+        # soup = BeautifulSoup(self.driver.page_source, 'html.parser')
+        # img_tags = soup.find_all('img')
+        # img_urls = [img['src'] for img in img_tags]
+        # for j, img in enumerate(img_urls):  # All images from that location
+        #     extension = img.split('.')[LAST_ELEMENT][:FULL_EXTENSTION]
+        #     if extension == 'net':
+        #         extension = 'png'
+        #     elif extension == 'jpe':
+        #         extension = 'jpeg'
+        #     file_name = f"img_{j}." + extension
+        #     try:
+        #         urllib.request.urlretrieve(img, os.path.join(self.place, page, inner_folder, file_name))
+        #         logging.info(f'An image was successfully downloaded. File name: {file_name}')
+        #     except ValueError as e:
+        #         logging.critical(f'The following error has occurred:{e}')
+        #         pass
+        return
     def tables_len(self):
         """return the len of a Selenium object"""
         table_len = len(self.driver.find_elements(By.TAG_NAME, "td"))

@@ -117,7 +117,7 @@ class Tables:
 
     def table_property_tax_roll_details(self):
         """Create Property_Tax_Roll_Details table"""
-        self.cur.execute('''CREATE TABLE IF NOT EXISTS `Property_Tax_Roll_Details` (
+        self.cur.execute('''CREATE TABLE IF NOT EXISTS `property_tax_roll_details` (
         idtax_details INT PRIMARY KEY AUTO_INCREMENT,
         `Elementary School` VARCHAR(45),
         `Junior High School` VARCHAR(45),
@@ -130,7 +130,7 @@ class Tables:
 
     def county_tax_roll_details(self):
         """Create County_Tax_Roll_Details table"""
-        self.cur.execute('''CREATE TABLE IF NOT EXISTS County_Tax_Roll_Details (
+        self.cur.execute('''CREATE TABLE IF NOT EXISTS county_tax_roll_details (
         idcounty_details INT PRIMARY KEY AUTO_INCREMENT,
         Fireplaces VARCHAR(45),
         `Half Baths` INT(11),

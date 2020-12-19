@@ -37,11 +37,14 @@ class Tables:
     # def drop_tables_if_exist(self):
     #     """Delete old tables if exist"""
     #
+=======
+    #     self.cur.execute('drop table if exists agents;')
     #     self.cur.execute('drop table if exists county_tax_roll_details;')
     #     self.cur.execute('drop table if exists property_tax_roll_details;')
     #     self.cur.execute('drop table if exists property_details;')
     #     self.cur.execute('drop table if exists prop_description;')
     #
+    #     self.cur.execute('drop table if exists company;')
     #     self.cur.execute('drop table if exists properties;')
     #     self.cur.execute('drop table if exists real_estate_funds;')
     #     self.cur.execute('drop table if exists property_agent;')
@@ -119,7 +122,7 @@ class Tables:
 
     def table_property_tax_roll_details(self):
         """Create Property_Tax_Roll_Details table"""
-        self.cur.execute('''CREATE TABLE IF NOT EXISTS `Property_Tax_Roll_Details` (
+        self.cur.execute('''CREATE TABLE IF NOT EXISTS `property_tax_roll_details` (
         idtax_details INT PRIMARY KEY AUTO_INCREMENT,
         `Elementary School` VARCHAR(45),
         `Junior High School` VARCHAR(45),
@@ -132,7 +135,7 @@ class Tables:
 
     def county_tax_roll_details(self):
         """Create County_Tax_Roll_Details table"""
-        self.cur.execute('''CREATE TABLE IF NOT EXISTS County_Tax_Roll_Details (
+        self.cur.execute('''CREATE TABLE IF NOT EXISTS county_tax_roll_details (
         idcounty_details INT PRIMARY KEY AUTO_INCREMENT,
         Fireplaces VARCHAR(45),
         `Half Baths` INT(11),

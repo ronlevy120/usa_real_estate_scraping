@@ -7,6 +7,9 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from myconstants import *
 import logging
+from pyvirtualdisplay import Display
+from sys import platform
+
 
 logging.basicConfig(handlers=[logging.FileHandler('scraping.log', 'w', 'utf-8')],
                     format="%(asctime)s-%(levelname)s-FILE:%(filename)s-FUNC:%(funcName)s-LINE:%(lineno)d-%(message)s",
@@ -25,6 +28,20 @@ class Scraper:
 
     def create_driver(self):
         """Creates a driver with the path initialized at the init method"""
+        if platform == 'linux' or platform == 'linux2':
+            print('Operating system = Linux')
+            logging.info('Operating system = Linux')
+            display = Display(visible=0, size=(800,800))
+            display.start()
+
+        elif platform == "win32":
+            print('Operating system = Windows')
+            logging.info('Operating system = Windows')
+        else:
+            print('Operating system not recognized')
+            logging.info('Operating system not recognized')
+
+
         self.driver = webdriver.Chrome(executable_path=self.path_to_driver)
         logging.info(f'A driver object was successfully made')
 

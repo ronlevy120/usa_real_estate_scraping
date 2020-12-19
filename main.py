@@ -40,6 +40,8 @@ class Main:
 
         # getting the places argument (list)
         self.places = self.ar.argp()[0]  # scrap those places
+        if self.places == 'all':
+            self.places = states
         logging.info(f'A places instance was successfully made out of ARgParseInput')
         logging.debug(f'Places len: {len(self.places)}')
 
@@ -67,9 +69,7 @@ Average yield among selected stocks: {self.pb.average_yield()[0]} %""")
             except ResourceWarning as e:
                 logging.error(f'error getting stocks_api data - ', e)
         self.states = self.ar.argp()[4]
-        if self.states == 'all':
-            print("Going National!")
-            self.places = states
+
 
     @staticmethod
     def make_folder(name):

@@ -75,7 +75,7 @@ class Tables:
         """Create company table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS company (
         idcompany INT PRIMARY KEY AUTO_INCREMENT,
-        comp_name VARCHAR(45),
+        comp_name VARCHAR(200),
         comp_phone VARCHAR(45),
         comp_address VARCHAR(45))
         ''')

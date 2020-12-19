@@ -94,7 +94,9 @@ Average yield among selected stocks: {self.pb.average_yield()[0]} %""")
             self.db = SaveToDatabase(self.sc)
             logging.info(f'An instance was successfully made out of SaveToDatabase')
             self.sc.create_driver()
-            self.make_folder(self.place)
+
+            # self.make_folder(self.place) # TODO removed for test - without saving pics
+
             self.url = HOMEPAGE + self.place + '/' + "list_v"
             self.sc.driver_get(self.url)
             self.page = 1
@@ -113,17 +115,23 @@ Average yield among selected stocks: {self.pb.average_yield()[0]} %""")
             self.url = HOMEPAGE + self.place + f"/{self.page}_p/list_v"
         self.sc.driver_get(self.url)
         # page_str = str(self.page)  # So we can use the page as string, later we'll change to int back
-        if not os.path.exists(os.path.join(self.place, str(self.page))):
-            os.mkdir(os.path.join(self.place, str(self.page)))
+
+        # if not os.path.exists(os.path.join(self.place, str(self.page))): # TODO removed for test - without saving pics
+        #     os.mkdir(os.path.join(self.place, str(self.page)))
+
         urls = self.sc.get_urls()  # List of all the url in that page
         for idx, cell_url in enumerate(urls):
             logging.info(f'Url from page is under process')
             logging.debug(f"Page number: {str(self.page)}")
-            inner_folder = self.sc.make_inner_folder(idx, cell_url, str(self.page))
-            logging.debug(f"Image folder name:{inner_folder}")
+
+            # inner_folder = self.sc.make_inner_folder(idx, cell_url, str(self.page)) # TODO removed for test - without saving pics
+            # logging.debug(f"Image folder name:{inner_folder}")
+
             self.sc.driver_get(cell_url)
-            self.sc.get_image(inner_folder=inner_folder, page=str(self.page))
-            logging.debug(f"The photos has been downloaded")
+
+            # self.sc.get_image(inner_folder=inner_folder, page=str(self.page)) # TODO removed for test - without saving pics
+            # logging.debug(f"The photos has been downloaded")
+
             print(self.sc.info_data())
             logging.debug(f"Info data has been processed. len: {len(self.sc.info_data())}")
             print(self.sc.table_data())

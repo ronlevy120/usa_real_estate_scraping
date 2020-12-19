@@ -73,6 +73,7 @@ class Scraper:
         #         logging.critical(f'The following error has occurred:{e}')
         #         pass
         return
+
     def tables_len(self):
         """return the len of a Selenium object"""
         table_len = len(self.driver.find_elements(By.TAG_NAME, "td"))

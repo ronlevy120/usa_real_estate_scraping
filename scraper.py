@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 from myconstants import *
 import logging
 
+
 logging.basicConfig(handlers=[logging.FileHandler('scraping.log', 'w', 'utf-8')],
                     format="%(asctime)s-%(levelname)s-FILE:%(filename)s-FUNC:%(funcName)s-LINE:%(lineno)d-%(message)s",
                     datefmt='%m-%d %H:%M',

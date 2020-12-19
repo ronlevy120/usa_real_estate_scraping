@@ -37,7 +37,6 @@ class Tables:
     # def drop_tables_if_exist(self):
     #     """Delete old tables if exist"""
     #
-=======
     #     self.cur.execute('drop table if exists agents;')
     #     self.cur.execute('drop table if exists county_tax_roll_details;')
     #     self.cur.execute('drop table if exists property_tax_roll_details;')

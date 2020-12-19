@@ -26,14 +26,19 @@ class SaveToDatabase:
 
     def add_data_to_database(self):
         """Adding the data from the Scraper class to the MYSQL database"""
-        if self.mn.check_duplicates():
+        if self.mn.check_duplicates_properties():
             self.mn.sql_properties()
-            self.mn.sql_agents()
-            self.mn.sql_company()
+            if self.mn.check_duplicates_agents():
+                self.mn.sql_agents()
+            if self.mn.check_duplicates_company():
+                self.mn.sql_company()
             self.mn.sql_prop_description()
             self.mn.property_details()
             self.mn.property_tax_roll_details()
             self.mn.county_tax_roll_details()
+            self.mn.property_agents_junction()
+            self.mn.company_agents_junction()
+            self.mn.company_property_junction()
             self.db_connection.commit()
         else:
             print("Property already exist in database")

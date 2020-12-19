@@ -62,8 +62,7 @@ class Main:
                 SaveToDatabase().add_stocks(self.years)
                 logging.debug(f'stocks data was added the database with the following yearS: {self.years}')
                 self.pb = PortfolioBuilder(self.years)
-                self.pb.print_chart()
-                print(f"""showing US real estate main stocks performance chart for the last {self.years} years.
+                print(f"""showing US real estate main stocks performance for the last {self.years} years.
 Average yield among selected stocks: {self.pb.average_yield()[0]} %""")
             except ResourceWarning as e:
                 logging.error(f'error getting stocks_api data - ', e)
@@ -149,6 +148,9 @@ Average yield among selected stocks: {self.pb.average_yield()[0]} %""")
         t.table_property_tax_roll_details()
         t.county_tax_roll_details()
         t.real_estate_funds()
+        t.property_agent()
+        t.company_agent()
+        t.company_property()
         db_connection = mysql.connector.connect(
             host=HOST,
             user=USER,

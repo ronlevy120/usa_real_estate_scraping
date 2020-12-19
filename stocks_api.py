@@ -17,7 +17,7 @@ class PortfolioBuilder:
         self.amount_of_stocks = 0
         self.my_df = []
         self.years = years
-        self.stocks_symbol_list = ['FSRNX', 'IYR', 'USRT', 'XLRE', 'REET', 'VNQ', 'RWR']
+        self.stocks_symbol_list = ['VGSIX', 'FSRNX', 'IYR', 'USRT', 'XLRE', 'REET', 'VNQ', 'RWR']
 
     def get_daily_data(self, tickers_list: List[str],
                        start_date: date,

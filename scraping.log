@@ -1,8 +1,11 @@
-12-18 21:33-INFO-FILE:main.py-FUNC:__init__-LINE:36-An ARgParseInput object was successfully made
-12-18 21:33-INFO-FILE:main.py-FUNC:__init__-LINE:43-A places instance was successfully made out of ARgParseInput
-12-18 21:33-ERROR-FILE:main.py-FUNC:__init__-LINE:59-invalid input: 0, should be an integer between [1-50]
-12-18 21:33-INFO-FILE:scraper.py-FUNC:__init__-LINE:24-A scraper object was successfully made. Place: new-york
-12-18 21:33-INFO-FILE:main.py-FUNC:run-LINE:91-An instance was successfully made out of Scraper
-12-18 21:33-INFO-FILE:main.py-FUNC:run-LINE:93-An instance was successfully made out of SaveToDatabase
-12-18 21:33-INFO-FILE:scraper.py-FUNC:create_driver-LINE:29-A driver object was successfully made
-12-18 21:33-INFO-FILE:scraper.py-FUNC:driver_get-LINE:64-driver.get was successfully made on the following url: https://www.homepath.com/listings/new-york/list_v
+12-19 00:11-INFO-FILE:main.py-FUNC:__init__-LINE:36-An ARgParseInput object was successfully made
+12-19 00:11-INFO-FILE:main.py-FUNC:__init__-LINE:43-A places instance was successfully made out of ARgParseInput
+12-19 00:11-ERROR-FILE:main.py-FUNC:__init__-LINE:59-invalid input: 0, should be an integer between [1-50]
+12-19 00:11-INFO-FILE:scraper.py-FUNC:__init__-LINE:24-A scraper object was successfully made. Place: new-york
+12-19 00:11-INFO-FILE:main.py-FUNC:run-LINE:91-An instance was successfully made out of Scraper
+12-19 00:11-INFO-FILE:main.py-FUNC:run-LINE:93-An instance was successfully made out of SaveToDatabase
+12-19 00:11-INFO-FILE:scraper.py-FUNC:create_driver-LINE:29-A driver object was successfully made
+12-19 00:11-INFO-FILE:scraper.py-FUNC:driver_get-LINE:64-driver.get was successfully made on the following url: https://www.homepath.com/listings/new-york/list_v
+12-19 00:11-INFO-FILE:scraper.py-FUNC:driver_get-LINE:64-driver.get was successfully made on the following url: https://www.homepath.com/listings/new-york/list_v
+12-19 00:11-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:118-Url from page is under process
+12-19 00:11-INFO-FILE:scraper.py-FUNC:driver_get-LINE:64-driver.get was successfully made on the following url: https://www.homepath.com/listing/103-boden-ave-valley-stream-ny-11580-46385577

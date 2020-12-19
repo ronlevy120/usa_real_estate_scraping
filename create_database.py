@@ -34,14 +34,20 @@ class Tables:
             passwd=PASS, database="usa_scraping_database")
         self.cur = self.db_connection.cursor()
 
-    def drop_tables_if_exist(self):
-        """Delete old tables if exist"""
-        self.cur.execute('drop table if exists agents;')
-        self.cur.execute('drop table if exists County_Tax_Roll_Details;')
-        self.cur.execute('drop table if exists Property_Tax_Roll_Details;')
-        self.cur.execute('drop table if exists property_details;')
-        self.cur.execute('drop table if exists prop_description;')
-        self.cur.execute('drop table if exists company;')
+    # def drop_tables_if_exist(self):
+    #     """Delete old tables if exist"""
+    #
+    #     self.cur.execute('drop table if exists county_tax_roll_details;')
+    #     self.cur.execute('drop table if exists property_tax_roll_details;')
+    #     self.cur.execute('drop table if exists property_details;')
+    #     self.cur.execute('drop table if exists prop_description;')
+    #
+    #     self.cur.execute('drop table if exists properties;')
+    #     self.cur.execute('drop table if exists real_estate_funds;')
+    #     self.cur.execute('drop table if exists property_agent;')
+    #     self.cur.execute('drop table if exists company_agent;')
+    #     self.cur.execute('drop table if exists agents;')
+    #     self.cur.execute('drop table if exists company;')
 
     def table_properties(self):
         """Create properties table"""
@@ -60,10 +66,7 @@ class Tables:
         self.cur.execute('''CREATE TABLE IF NOT EXISTS agents (
         idagents INT PRIMARY KEY AUTO_INCREMENT,
         agent_name VARCHAR(45),
-        agent_phone VARCHAR(45),
-        idproperties INT,
-        FOREIGN KEY(idproperties)
-        REFERENCES properties(idproperties))
+        agent_phone VARCHAR(45))
         ''')
 
     def table_company(self):
@@ -72,10 +75,7 @@ class Tables:
         idcompany INT PRIMARY KEY AUTO_INCREMENT,
         comp_name VARCHAR(45),
         comp_phone VARCHAR(45),
-        comp_address VARCHAR(45),
-        idproperties INT(11),
-        FOREIGN KEY (idproperties)
-        REFERENCES properties (idproperties))
+        comp_address VARCHAR(45))
         ''')
 
     def table_prop_description(self):
@@ -161,3 +161,43 @@ class Tables:
         from_date DATE,
         to_date DATE)
         ''')
+
+    def property_agent(self):
+        """
+        This is a junction table, so we can connect property to many agent and vice versa.
+        """
+        self.cur.execute('''CREATE TABLE IF NOT EXISTS property_agent (
+        `idproperties` INT(11),
+        idagents INT(11),
+        FOREIGN KEY (idproperties)
+        REFERENCES `properties` (`idproperties`),
+        FOREIGN KEY (idagents)
+        REFERENCES agents (idagents))
+             ''')
+
+    def company_agent(self):
+        """
+        This is a junction table, so we can connect companies to many agent and vice versa.
+        """
+        self.cur.execute('''CREATE TABLE IF NOT EXISTS company_agent (
+        `idcompany` INT(11),
+        idagents INT(11),
+        FOREIGN KEY (idcompany)
+        REFERENCES `company` (`idcompany`),
+        FOREIGN KEY (idagents)
+        REFERENCES agents (idagents))
+             ''')
+
+    def company_property(self):
+        """
+        This is a junction table, so we can connect companies to many properties and vice versa.
+        """
+        self.cur.execute('''CREATE TABLE IF NOT EXISTS company_property (
+        `idcompany` INT(11),
+        `idproperties` INT(11),
+        FOREIGN KEY (idcompany)
+        REFERENCES `company` (`idcompany`),
+        FOREIGN KEY (idproperties)
+        REFERENCES `properties` (`idproperties`))
+             ''')
+

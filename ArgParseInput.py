@@ -20,6 +20,8 @@ class ArgParseInput:
         parser.add_argument('restart_data', type=str, nargs='?', default="do-not-restart",
                             choices=['restart', 'do-not-restart'],
                                 help="Choose whether to delete old observations or not")
+        parser.add_argument('all', type=str, nargs='?',
+                            help="Scrap all states")
 
         args = parser.parse_args()
         return list(map(lambda x: x.lower(), args.places.split(' '))), args.rows, args.years, args.restart_data

@@ -66,7 +66,10 @@ class Main:
 Average yield among selected stocks: {self.pb.average_yield()[0]} %""")
             except ResourceWarning as e:
                 logging.error(f'error getting stocks_api data - ', e)
-
+        self.states = self.ar.argp()[4]
+        if self.states == 'all':
+            print("Going National!")
+            self.places = states
 
     @staticmethod
     def make_folder(name):

@@ -1,1 +1,320 @@
-12-19 22:29-INFO-FILE:main.py-FUNC:__init__-LINE:36-An ARgParseInput object was successfully made
+12-27 17:32-INFO-FILE:main.py-FUNC:__init__-LINE:36-An ARgParseInput object was successfully made
+12-27 17:32-INFO-FILE:main.py-FUNC:__init__-LINE:46-A places instance was successfully made out of ARgParseInput
+12-27 17:33-INFO-FILE:scraper.py-FUNC:__init__-LINE:31-A scraper object was successfully made. Place: alabama
+12-27 17:33-INFO-FILE:main.py-FUNC:run-LINE:93-An instance was successfully made out of Scraper
+12-27 17:33-INFO-FILE:main.py-FUNC:run-LINE:95-An instance was successfully made out of SaveToDatabase
+12-27 17:33-INFO-FILE:scraper.py-FUNC:create_driver-LINE:43-Operating system = Windows
+12-27 17:33-INFO-FILE:scraper.py-FUNC:create_driver-LINE:50-A driver object was successfully made
+12-27 17:33-INFO-FILE:scraper.py-FUNC:driver_get-LINE:85-driver.get was successfully made on the following url: https://www.homepath.com/listings/alabama/list_v
+12-27 17:33-INFO-FILE:scraper.py-FUNC:driver_get-LINE:85-driver.get was successfully made on the following url: https://www.homepath.com/listings/alabama/list_v
+12-27 17:33-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:120-Url from page is under process
+12-27 17:33-INFO-FILE:scraper.py-FUNC:driver_get-LINE:85-driver.get was successfully made on the following url: https://www.homepath.com/listing/3051-central-rd-eclectic-al-36024-46382940
+12-27 17:33-INFO-FILE:scraper.py-FUNC:info_data-LINE:224-info_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:full_address-LINE:115-Successfully returned address : 3051 Central Rd
+Eclectic, Alabama 36024
+12-27 17:33-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:128-Successfully returned boolean regarding just_listed
+12-27 17:33-INFO-FILE:scraper.py-FUNC:reo_id-LINE:138-Successfully returned on reo_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:mls_id-LINE:147-Successfully returned on mls_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_name-LINE:157-Successfully returned on agent_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:168-Successfully returned on agent_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:179-Successfully returned on agent_company_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:190-Successfully returned on agent_company_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:201-Successfully returned on agent_company_address
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:description-LINE:216-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:info_data-LINE:224-info_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:full_address-LINE:115-Successfully returned address : 3051 Central Rd
+Eclectic, Alabama 36024
+12-27 17:33-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:128-Successfully returned boolean regarding just_listed
+12-27 17:33-INFO-FILE:scraper.py-FUNC:reo_id-LINE:138-Successfully returned on reo_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:mls_id-LINE:147-Successfully returned on mls_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_name-LINE:157-Successfully returned on agent_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:168-Successfully returned on agent_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:179-Successfully returned on agent_company_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:190-Successfully returned on agent_company_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:201-Successfully returned on agent_company_address
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:description-LINE:216-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:reo_id-LINE:138-Successfully returned on reo_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:mls_id-LINE:147-Successfully returned on mls_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:update_date-LINE:263-Successfully returned on update date
+12-27 17:33-INFO-FILE:scraper.py-FUNC:full_address-LINE:115-Successfully returned address : 3051 Central Rd
+Eclectic, Alabama 36024
+12-27 17:33-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:128-Successfully returned boolean regarding just_listed
+12-27 17:33-INFO-FILE:scraper.py-FUNC:reo_id-LINE:138-Successfully returned on reo_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:mls_id-LINE:147-Successfully returned on mls_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:update_date-LINE:263-Successfully returned on update date
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_name-LINE:157-Successfully returned on agent_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:168-Successfully returned on agent_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_name-LINE:157-Successfully returned on agent_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:168-Successfully returned on agent_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:179-Successfully returned on agent_company_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:190-Successfully returned on agent_company_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:201-Successfully returned on agent_company_address
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:179-Successfully returned on agent_company_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:190-Successfully returned on agent_company_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:201-Successfully returned on agent_company_address
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:description-LINE:216-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:132-Success! data has been inserted into SQL tables
+12-27 17:33-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:120-Url from page is under process
+12-27 17:33-INFO-FILE:scraper.py-FUNC:driver_get-LINE:85-driver.get was successfully made on the following url: https://www.homepath.com/listing/3007-george-b-edmond-montgomery-al-36110-46384027
+12-27 17:33-INFO-FILE:scraper.py-FUNC:info_data-LINE:224-info_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:full_address-LINE:115-Successfully returned address : 3007 George B Edmond
+Montgomery, Alabama 36110
+12-27 17:33-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:128-Successfully returned boolean regarding just_listed
+12-27 17:33-INFO-FILE:scraper.py-FUNC:reo_id-LINE:138-Successfully returned on reo_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:mls_id-LINE:147-Successfully returned on mls_id
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:mls_id-LINE:150-The following error has occurred:Message: no such element: Unable to locate element: {"method":"css selector","selector":".mlsid"}
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_name-LINE:157-Successfully returned on agent_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:168-Successfully returned on agent_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:179-Successfully returned on agent_company_name
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:agent_company_phone-LINE:194-The following error has occurred:Message: no such element: Unable to locate element: {"method":"css selector","selector":".company-phone"}
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:201-Successfully returned on agent_company_address
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:description-LINE:216-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:info_data-LINE:224-info_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:full_address-LINE:115-Successfully returned address : 3007 George B Edmond
+Montgomery, Alabama 36110
+12-27 17:33-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:128-Successfully returned boolean regarding just_listed
+12-27 17:33-INFO-FILE:scraper.py-FUNC:reo_id-LINE:138-Successfully returned on reo_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:mls_id-LINE:147-Successfully returned on mls_id
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:mls_id-LINE:150-The following error has occurred:Message: no such element: Unable to locate element: {"method":"css selector","selector":".mlsid"}
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_name-LINE:157-Successfully returned on agent_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:168-Successfully returned on agent_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:179-Successfully returned on agent_company_name
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:agent_company_phone-LINE:194-The following error has occurred:Message: no such element: Unable to locate element: {"method":"css selector","selector":".company-phone"}
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:201-Successfully returned on agent_company_address
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:description-LINE:216-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:reo_id-LINE:138-Successfully returned on reo_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:mls_id-LINE:147-Successfully returned on mls_id
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:mls_id-LINE:150-The following error has occurred:Message: no such element: Unable to locate element: {"method":"css selector","selector":".mlsid"}
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:update_date-LINE:263-Successfully returned on update date
+12-27 17:33-INFO-FILE:scraper.py-FUNC:full_address-LINE:115-Successfully returned address : 3007 George B Edmond
+Montgomery, Alabama 36110
+12-27 17:33-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:128-Successfully returned boolean regarding just_listed
+12-27 17:33-INFO-FILE:scraper.py-FUNC:reo_id-LINE:138-Successfully returned on reo_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:mls_id-LINE:147-Successfully returned on mls_id
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:mls_id-LINE:150-The following error has occurred:Message: no such element: Unable to locate element: {"method":"css selector","selector":".mlsid"}
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:update_date-LINE:263-Successfully returned on update date
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_name-LINE:157-Successfully returned on agent_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:168-Successfully returned on agent_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_name-LINE:157-Successfully returned on agent_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:168-Successfully returned on agent_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:179-Successfully returned on agent_company_name
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:agent_company_phone-LINE:194-The following error has occurred:Message: no such element: Unable to locate element: {"method":"css selector","selector":".company-phone"}
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:201-Successfully returned on agent_company_address
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:179-Successfully returned on agent_company_name
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:agent_company_phone-LINE:194-The following error has occurred:Message: no such element: Unable to locate element: {"method":"css selector","selector":".company-phone"}
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:201-Successfully returned on agent_company_address
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:description-LINE:216-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:132-Success! data has been inserted into SQL tables
+12-27 17:33-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:120-Url from page is under process
+12-27 17:33-INFO-FILE:scraper.py-FUNC:driver_get-LINE:85-driver.get was successfully made on the following url: https://www.homepath.com/listing/16-mulberry-ave-russellville-al-35653-46370389
+12-27 17:33-INFO-FILE:scraper.py-FUNC:info_data-LINE:224-info_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:full_address-LINE:115-Successfully returned address : 16 Mulberry Ave
+Russellville, Alabama 35653
+12-27 17:33-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:128-Successfully returned boolean regarding just_listed
+12-27 17:33-INFO-FILE:scraper.py-FUNC:reo_id-LINE:138-Successfully returned on reo_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:mls_id-LINE:147-Successfully returned on mls_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_name-LINE:157-Successfully returned on agent_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:168-Successfully returned on agent_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:179-Successfully returned on agent_company_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:190-Successfully returned on agent_company_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:201-Successfully returned on agent_company_address
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:description-LINE:216-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:info_data-LINE:224-info_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:full_address-LINE:115-Successfully returned address : 16 Mulberry Ave
+Russellville, Alabama 35653
+12-27 17:33-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:128-Successfully returned boolean regarding just_listed
+12-27 17:33-INFO-FILE:scraper.py-FUNC:reo_id-LINE:138-Successfully returned on reo_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:mls_id-LINE:147-Successfully returned on mls_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_name-LINE:157-Successfully returned on agent_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:168-Successfully returned on agent_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:179-Successfully returned on agent_company_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:190-Successfully returned on agent_company_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:201-Successfully returned on agent_company_address
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:description-LINE:216-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:reo_id-LINE:138-Successfully returned on reo_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:mls_id-LINE:147-Successfully returned on mls_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:update_date-LINE:263-Successfully returned on update date
+12-27 17:33-INFO-FILE:scraper.py-FUNC:full_address-LINE:115-Successfully returned address : 16 Mulberry Ave
+Russellville, Alabama 35653
+12-27 17:33-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:128-Successfully returned boolean regarding just_listed
+12-27 17:33-INFO-FILE:scraper.py-FUNC:reo_id-LINE:138-Successfully returned on reo_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:mls_id-LINE:147-Successfully returned on mls_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:update_date-LINE:263-Successfully returned on update date
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_name-LINE:157-Successfully returned on agent_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:168-Successfully returned on agent_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_name-LINE:157-Successfully returned on agent_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:168-Successfully returned on agent_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:179-Successfully returned on agent_company_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:190-Successfully returned on agent_company_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:201-Successfully returned on agent_company_address
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:179-Successfully returned on agent_company_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:190-Successfully returned on agent_company_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:201-Successfully returned on agent_company_address
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:description-LINE:216-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:132-Success! data has been inserted into SQL tables
+12-27 17:33-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:120-Url from page is under process
+12-27 17:33-INFO-FILE:scraper.py-FUNC:driver_get-LINE:85-driver.get was successfully made on the following url: https://www.homepath.com/listing/413-andrew-avenue-anniston-al-36201-46385523
+12-27 17:33-INFO-FILE:scraper.py-FUNC:info_data-LINE:224-info_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:full_address-LINE:115-Successfully returned address : 413 Andrew Avenue
+Anniston, Alabama 36201
+12-27 17:33-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:128-Successfully returned boolean regarding just_listed
+12-27 17:33-INFO-FILE:scraper.py-FUNC:reo_id-LINE:138-Successfully returned on reo_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:mls_id-LINE:147-Successfully returned on mls_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_name-LINE:157-Successfully returned on agent_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:168-Successfully returned on agent_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:179-Successfully returned on agent_company_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:190-Successfully returned on agent_company_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:201-Successfully returned on agent_company_address
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:description-LINE:216-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:info_data-LINE:224-info_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:full_address-LINE:115-Successfully returned address : 413 Andrew Avenue
+Anniston, Alabama 36201
+12-27 17:33-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:128-Successfully returned boolean regarding just_listed
+12-27 17:33-INFO-FILE:scraper.py-FUNC:reo_id-LINE:138-Successfully returned on reo_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:mls_id-LINE:147-Successfully returned on mls_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_name-LINE:157-Successfully returned on agent_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:168-Successfully returned on agent_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:179-Successfully returned on agent_company_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:190-Successfully returned on agent_company_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:201-Successfully returned on agent_company_address
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:description-LINE:216-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:reo_id-LINE:138-Successfully returned on reo_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:mls_id-LINE:147-Successfully returned on mls_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:update_date-LINE:263-Successfully returned on update date
+12-27 17:33-INFO-FILE:scraper.py-FUNC:full_address-LINE:115-Successfully returned address : 413 Andrew Avenue
+Anniston, Alabama 36201
+12-27 17:33-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:128-Successfully returned boolean regarding just_listed
+12-27 17:33-INFO-FILE:scraper.py-FUNC:reo_id-LINE:138-Successfully returned on reo_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:mls_id-LINE:147-Successfully returned on mls_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:update_date-LINE:263-Successfully returned on update date
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_name-LINE:157-Successfully returned on agent_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:168-Successfully returned on agent_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_name-LINE:157-Successfully returned on agent_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:168-Successfully returned on agent_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:179-Successfully returned on agent_company_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:190-Successfully returned on agent_company_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:201-Successfully returned on agent_company_address
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:179-Successfully returned on agent_company_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:190-Successfully returned on agent_company_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:201-Successfully returned on agent_company_address
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:description-LINE:216-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:132-Success! data has been inserted into SQL tables
+12-27 17:33-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:120-Url from page is under process
+12-27 17:33-INFO-FILE:scraper.py-FUNC:driver_get-LINE:85-driver.get was successfully made on the following url: https://www.homepath.com/listing/2662-paden-pl-vestavia-al-35226-46383815
+12-27 17:33-INFO-FILE:scraper.py-FUNC:info_data-LINE:224-info_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:full_address-LINE:115-Successfully returned address : 2662 Paden Pl
+Vestavia, Alabama 35226
+12-27 17:33-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:128-Successfully returned boolean regarding just_listed
+12-27 17:33-INFO-FILE:scraper.py-FUNC:reo_id-LINE:138-Successfully returned on reo_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:mls_id-LINE:147-Successfully returned on mls_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_name-LINE:157-Successfully returned on agent_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:168-Successfully returned on agent_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:179-Successfully returned on agent_company_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:190-Successfully returned on agent_company_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:201-Successfully returned on agent_company_address
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:description-LINE:216-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:info_data-LINE:224-info_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:full_address-LINE:115-Successfully returned address : 2662 Paden Pl
+Vestavia, Alabama 35226
+12-27 17:33-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:128-Successfully returned boolean regarding just_listed
+12-27 17:33-INFO-FILE:scraper.py-FUNC:reo_id-LINE:138-Successfully returned on reo_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:mls_id-LINE:147-Successfully returned on mls_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_name-LINE:157-Successfully returned on agent_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:168-Successfully returned on agent_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:179-Successfully returned on agent_company_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:190-Successfully returned on agent_company_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:201-Successfully returned on agent_company_address
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:description-LINE:216-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:reo_id-LINE:138-Successfully returned on reo_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:mls_id-LINE:147-Successfully returned on mls_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:update_date-LINE:263-Successfully returned on update date
+12-27 17:33-INFO-FILE:scraper.py-FUNC:full_address-LINE:115-Successfully returned address : 2662 Paden Pl
+Vestavia, Alabama 35226
+12-27 17:33-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:128-Successfully returned boolean regarding just_listed
+12-27 17:33-INFO-FILE:scraper.py-FUNC:reo_id-LINE:138-Successfully returned on reo_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:mls_id-LINE:147-Successfully returned on mls_id
+12-27 17:33-INFO-FILE:scraper.py-FUNC:update_date-LINE:263-Successfully returned on update date
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_name-LINE:157-Successfully returned on agent_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:168-Successfully returned on agent_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_name-LINE:157-Successfully returned on agent_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:168-Successfully returned on agent_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:179-Successfully returned on agent_company_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:190-Successfully returned on agent_company_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:201-Successfully returned on agent_company_address
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:179-Successfully returned on agent_company_name
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:190-Successfully returned on agent_company_phone
+12-27 17:33-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:201-Successfully returned on agent_company_address
+12-27 17:33-CRITICAL-FILE:scraper.py-FUNC:description-LINE:216-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:scraper.py-FUNC:table_data-LINE:256-table_data has been Successfully called
+12-27 17:33-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:132-Success! data has been inserted into SQL tables
+12-27 17:33-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:120-Url from page is under process

@@ -10,6 +10,8 @@ class Sql:
         self.cur = cur
         self.sc = sc
         self.last_id_property = None
+        self.last_id_agents = None
+        self.last_id_company = None
         self.place = place
 
     def check_duplicates_properties(self):

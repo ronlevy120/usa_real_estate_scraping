@@ -49,9 +49,9 @@ class Main:
         # getting the search_limit argument
         self.search_limit = self.ar.argp()[1]
         logging.debug(f'Search limit: {self.search_limit}')
-        if self.search_limit > 999:
+        if self.search_limit > 99:
             self.search_limit = 'Unlimited search'
-        print(f"limit pages up to page number: Unlimited search")
+        print(f"limit pages up to page number: {self.search_limit}")
 
         # getting the years argument (for the stocks chart)
         self.years = self.ar.argp()[2]
@@ -91,7 +91,7 @@ Average yield among selected stocks: {self.pb.average_yield()[0]} %""")
             self.sc = Scraper(place=self.place, path_to_driver=WEBDRIVER_PATH)
 
             logging.info(f'An instance was successfully made out of Scraper')
-            self.db = SaveToDatabase(self.sc)
+            self.db = SaveToDatabase(self.sc, self.place)
             logging.info(f'An instance was successfully made out of SaveToDatabase')
             self.sc.create_driver()
             self.make_folder(self.place)
@@ -142,7 +142,6 @@ Average yield among selected stocks: {self.pb.average_yield()[0]} %""")
             ndb.delete_old()
         ndb.create_new()
         t = Tables()
-        # t.drop_tables_if_exist()
         t.table_properties()
         t.table_agents()
         t.table_company()

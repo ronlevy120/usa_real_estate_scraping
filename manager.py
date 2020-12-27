@@ -2,7 +2,7 @@ from detailes_cond import Utility
 from stocks_api import PortfolioBuilder
 
 class Sql:
-    def __init__(self, cur, sc=None):
+    def __init__(self, cur, place=None, sc=None):
         """
         Initialize Sql class.
         Defines sc as the Scraper class object and the cursor as cur
@@ -10,13 +10,15 @@ class Sql:
         self.cur = cur
         self.sc = sc
         self.last_id_property = None
+        self.place = place
 
     def check_duplicates_properties(self):
         self.cur.execute("""SELECT count(*) as count
         FROM properties
         WHERE reo_id = %s
         AND mls_id = %s
-        AND update_date = %s""", [self.sc.reo_id(), self.sc.mls_id(), self.sc.update_date()])
+        AND update_date = %s
+        AND state = %s""", [self.sc.reo_id(), self.sc.mls_id(), self.sc.update_date(), self.place])
         if self.cur.fetchall()[0][0] == 0:
             return True
         return False
@@ -43,9 +45,9 @@ class Sql:
     def sql_properties(self):
         """Insert values into properties table"""
         self.cur.execute("""INSERT INTO properties (
-                    address, just_list, reo_id, mls_id, update_date )
-                    VALUES (%s, %s, %s, %s, %s)""", [self.sc.full_address(), self.sc.just_listed_status(),
-                                                self.sc.reo_id(), self.sc.mls_id(), self.sc.update_date()])
+                    address, just_list, reo_id, mls_id, update_date, state)
+                    VALUES (%s, %s, %s, %s, %s, %s)""", [self.sc.full_address(), self.sc.just_listed_status(),
+                                                self.sc.reo_id(), self.sc.mls_id(), self.sc.update_date(), self.place])
         self.last_id_property = self.cur.lastrowid
         print(f"last id property: {self.last_id_property}")
 

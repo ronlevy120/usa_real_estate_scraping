@@ -5,7 +5,7 @@ from passw import *
 
 class SaveToDatabase:
 
-    def __init__(self, sc=None):
+    def __init__(self, place=None, sc=None):
         """
         Initialize SaveToDatabase class.
         Defines sc as the Scraper class object and connection to the database
@@ -18,7 +18,7 @@ class SaveToDatabase:
         )
         self.sc = sc
         self.cur = self.db_connection.cursor()
-        self.mn = Sql(self.cur, self.sc)
+        self.mn = Sql(self.cur, self.sc, place)
 
     def add_stocks(self, years):
         self.mn.stocks(years)

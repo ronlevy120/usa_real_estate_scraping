@@ -34,23 +34,6 @@ class Tables:
             passwd=PASS, database="usa_scraping_database")
         self.cur = self.db_connection.cursor()
 
-    # def drop_tables_if_exist(self):
-    #     """Delete old tables if exist"""
-    #
-    #     self.cur.execute('drop table if exists agents;')
-    #     self.cur.execute('drop table if exists county_tax_roll_details;')
-    #     self.cur.execute('drop table if exists property_tax_roll_details;')
-    #     self.cur.execute('drop table if exists property_details;')
-    #     self.cur.execute('drop table if exists prop_description;')
-    #
-    #     self.cur.execute('drop table if exists company;')
-    #     self.cur.execute('drop table if exists properties;')
-    #     self.cur.execute('drop table if exists real_estate_funds;')
-    #     self.cur.execute('drop table if exists property_agent;')
-    #     self.cur.execute('drop table if exists company_agent;')
-    #     self.cur.execute('drop table if exists agents;')
-    #     self.cur.execute('drop table if exists company;')
-
     def table_properties(self):
         """Create properties table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS properties (
@@ -59,7 +42,8 @@ class Tables:
          just_list VARCHAR(45),
          reo_id VARCHAR(45),
          mls_id VARCHAR(45),
-         update_date VARCHAR (200))
+         update_date VARCHAR (200),
+         state VARCHAR (200))
         ''')
         self.cur.execute('''ALTER TABLE properties AUTO_INCREMENT = 1''')
 

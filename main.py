@@ -40,7 +40,7 @@ class Main:
 
         # getting the places argument (list)
         self.places = self.ar.argp()[0]  # scrap those places
-        if self.places == 'all':
+        if self.places[0] == 'all':
             print("Going all states!")
             self.places = states
         logging.info(f'A places instance was successfully made out of ARgParseInput')
@@ -49,9 +49,9 @@ class Main:
         # getting the search_limit argument
         self.search_limit = self.ar.argp()[1]
         logging.debug(f'Search limit: {self.search_limit}')
-        if self.search_limit == 9999:
+        if self.search_limit > 999:
             self.search_limit = 'Unlimited search'
-        print(f"limit pages up to page number: {self.search_limit}")
+        print(f"limit pages up to page number: Unlimited search")
 
         # getting the years argument (for the stocks chart)
         self.years = self.ar.argp()[2]

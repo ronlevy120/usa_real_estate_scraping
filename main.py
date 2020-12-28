@@ -106,30 +106,30 @@ Average yield among selected stocks: {self.pb.average_yield()[0]} %""")
                 # If there are any results at this page or limitation not exceeded
                 while self.page < self.search_limit or self.sc.tables_len() > 3:
                     self.do_the_actual_work()
-                
+
     def do_the_actual_work(self):
         """Doing the process of scraping the data and saving to database"""
         if self.page > 1:  # if it's not the first page
             self.url = HOMEPAGE + self.place + f"/{self.page}_p/list_v"
         self.sc.driver_get(self.url)
         # page_str = str(self.page)  # So we can use the page as string, later we'll change to int back
-        if not os.path.exists(os.path.join(self.place, str(self.page))):
-            os.mkdir(os.path.join(self.place, str(self.page)))
+        # if not os.path.exists(os.path.join(self.place, str(self.page))):
+        #     os.mkdir(os.path.join(self.place, str(self.page)))
         urls = self.sc.get_urls()  # List of all the url in that page
         for idx, cell_url in enumerate(urls):
             logging.info(f'Url from page is under process')
             logging.debug(f"Page number: {str(self.page)}")
-            inner_folder = self.sc.make_inner_folder(idx, cell_url, str(self.page))
-            logging.debug(f"Image folder name:{inner_folder}")
+            # inner_folder = self.sc.make_inner_folder(idx, cell_url, str(self.page))
+            # logging.debug(f"Image folder name:{inner_folder}")
             self.sc.driver_get(cell_url)
-            self.sc.get_image(inner_folder=inner_folder, page=str(self.page))
-            logging.debug(f"The photos has been downloaded")
             print(self.sc.info_data())
             logging.debug(f"Info data has been processed. len: {len(self.sc.info_data())}")
             print(self.sc.table_data())
             logging.debug(f"Table data has been processed. len: {len(self.sc.table_data())}")
-            self.db.add_data_to_database()  # Making SQL Query from the data
+            property_id = self.db.add_data_to_database()  # Making SQL Query from the data
             logging.info(f"Success! data has been inserted into SQL tables")
+            self.sc.get_image(property_id=property_id)
+            logging.debug(f"The photos has been downloaded")
         self.sc.driver_get(self.url)
         print(f"End of loop {str(self.page) }")
         self.page = int(self.page)

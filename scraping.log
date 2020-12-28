@@ -1,10 +1,784 @@
-12-27 19:33-INFO-FILE:main.py-FUNC:__init__-LINE:36-An ARgParseInput object was successfully made
-12-27 19:33-INFO-FILE:main.py-FUNC:__init__-LINE:46-A places instance was successfully made out of ARgParseInput
-12-27 19:34-INFO-FILE:scraper.py-FUNC:__init__-LINE:31-A scraper object was successfully made. Place: alabama
-12-27 19:34-INFO-FILE:main.py-FUNC:run-LINE:93-An instance was successfully made out of Scraper
-12-27 19:34-INFO-FILE:main.py-FUNC:run-LINE:95-An instance was successfully made out of SaveToDatabase
-12-27 19:34-INFO-FILE:scraper.py-FUNC:create_driver-LINE:43-Operating system = Windows
-12-27 19:34-INFO-FILE:scraper.py-FUNC:create_driver-LINE:50-A driver object was successfully made
-12-27 19:34-INFO-FILE:scraper.py-FUNC:driver_get-LINE:85-driver.get was successfully made on the following url: https://www.homepath.com/listings/alabama/list_v
-12-27 19:34-INFO-FILE:scraper.py-FUNC:driver_get-LINE:85-driver.get was successfully made on the following url: https://www.homepath.com/listings/alabama/list_v
-12-27 19:34-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:120-Url from page is under process
+12-28 11:02-INFO-FILE:main.py-FUNC:__init__-LINE:36-An ARgParseInput object was successfully made
+12-28 11:02-INFO-FILE:main.py-FUNC:__init__-LINE:46-A places instance was successfully made out of ARgParseInput
+12-28 11:02-INFO-FILE:scraper.py-FUNC:__init__-LINE:28-A scraper object was successfully made. Place: alabama
+12-28 11:02-INFO-FILE:main.py-FUNC:run-LINE:93-An instance was successfully made out of Scraper
+12-28 11:02-INFO-FILE:main.py-FUNC:run-LINE:95-An instance was successfully made out of SaveToDatabase
+12-28 11:02-INFO-FILE:scraper.py-FUNC:create_driver-LINE:40-Operating system = Windows
+12-28 11:02-INFO-FILE:scraper.py-FUNC:create_driver-LINE:47-A driver object was successfully made
+12-28 11:02-INFO-FILE:main.py-FUNC:make_folder-LINE:84-A folder has been made. Folder name: alabama
+12-28 11:02-INFO-FILE:scraper.py-FUNC:driver_get-LINE:82-driver.get was successfully made on the following url: https://www.homepath.com/listings/alabama/list_v
+12-28 11:03-INFO-FILE:scraper.py-FUNC:driver_get-LINE:82-driver.get was successfully made on the following url: https://www.homepath.com/listings/alabama/list_v
+12-28 11:03-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:120-Url from page is under process
+12-28 11:03-INFO-FILE:scraper.py-FUNC:driver_get-LINE:82-driver.get was successfully made on the following url: https://www.homepath.com/listing/3007-george-b-edmond-montgomery-al-36110-46384027
+12-28 11:03-INFO-FILE:scraper.py-FUNC:info_data-LINE:221-info_data has been Successfully called
+12-28 11:03-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 3007 George B Edmond
+Montgomery, Alabama 36110
+12-28 11:03-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:03-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:mls_id-LINE:147-The following error has occurred:Message: no such element: Unable to locate element: {"method":"css selector","selector":".mlsid"}
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:agent_company_phone-LINE:191-The following error has occurred:Message: no such element: Unable to locate element: {"method":"css selector","selector":".company-phone"}
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:03-INFO-FILE:scraper.py-FUNC:info_data-LINE:221-info_data has been Successfully called
+12-28 11:03-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 3007 George B Edmond
+Montgomery, Alabama 36110
+12-28 11:03-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:03-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:mls_id-LINE:147-The following error has occurred:Message: no such element: Unable to locate element: {"method":"css selector","selector":".mlsid"}
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:agent_company_phone-LINE:191-The following error has occurred:Message: no such element: Unable to locate element: {"method":"css selector","selector":".company-phone"}
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:03-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:03-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:03-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:mls_id-LINE:147-The following error has occurred:Message: no such element: Unable to locate element: {"method":"css selector","selector":".mlsid"}
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:03-INFO-FILE:scraper.py-FUNC:update_date-LINE:260-Successfully returned on update date
+12-28 11:03-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 3007 George B Edmond
+Montgomery, Alabama 36110
+12-28 11:03-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:03-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:mls_id-LINE:147-The following error has occurred:Message: no such element: Unable to locate element: {"method":"css selector","selector":".mlsid"}
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:03-INFO-FILE:scraper.py-FUNC:update_date-LINE:260-Successfully returned on update date
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:agent_company_phone-LINE:191-The following error has occurred:Message: no such element: Unable to locate element: {"method":"css selector","selector":".company-phone"}
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:agent_company_phone-LINE:191-The following error has occurred:Message: no such element: Unable to locate element: {"method":"css selector","selector":".company-phone"}
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:03-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:03-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:03-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:03-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:130-Success! data has been inserted into SQL tables
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/logo-hp-1833910cc693e2e4425203c594fd3dd7.svg'
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_1_1.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_1_2.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_1_3.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_1_4.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_1_5.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_1_6.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_1_7.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_1_8.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_1_9.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_1_10.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_1_11.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_1_12.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_1_13.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_1_14.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_1_15.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_1_16.png
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/photos/aerial/46385622'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_facebook-27b3bf154a39074e558bc19a5bcd5787.gif'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_twitter-e571087b125dfd231014482a6587f5c4.gif'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_email-2771bca38eb671644661b63a354e47ab.gif'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/detailsFirstLookProgram_sm-f50273d31f2655385f3c99857bb86ce6.png'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/needclosingcostassistance-fde2fa162d6d341225813d799e86f1e4.jpg'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/readybuye-right-col-add-ff0dbd417b04a26a1bbd8b1aa27ee8e2.jpg'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/homeready-right-col-add-662e9cef0957dccb0d93040af60a82f3.jpg'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/fannieMaeLogo.svg?v=1'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/btn-app-store.png?v=1'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/btn-google-play.png?v=1'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/logoEqualHousing-5c2e72a64221424d5e765ec3a8382226.jpg'
+12-28 11:03-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:120-Url from page is under process
+12-28 11:03-INFO-FILE:scraper.py-FUNC:driver_get-LINE:82-driver.get was successfully made on the following url: https://www.homepath.com/listing/3051-central-rd-eclectic-al-36024-46382940
+12-28 11:03-INFO-FILE:scraper.py-FUNC:info_data-LINE:221-info_data has been Successfully called
+12-28 11:03-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 3051 Central Rd
+Eclectic, Alabama 36024
+12-28 11:03-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:03-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:03-INFO-FILE:scraper.py-FUNC:info_data-LINE:221-info_data has been Successfully called
+12-28 11:03-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 3051 Central Rd
+Eclectic, Alabama 36024
+12-28 11:03-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:03-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:03-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:03-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:03-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:update_date-LINE:260-Successfully returned on update date
+12-28 11:03-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 3051 Central Rd
+Eclectic, Alabama 36024
+12-28 11:03-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:03-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:update_date-LINE:260-Successfully returned on update date
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:03-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:03-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:03-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:03-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:130-Success! data has been inserted into SQL tables
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/logo-hp-1833910cc693e2e4425203c594fd3dd7.svg'
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_1.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_2.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_3.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_4.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_5.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_6.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_7.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_8.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_9.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_10.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_11.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_12.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_13.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_14.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_15.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_16.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_17.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_18.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_19.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_20.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_21.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_22.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_23.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_24.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_25.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_26.png
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/photos/aerial/46385622'
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_28.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_29.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_2_30.png
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_facebook-27b3bf154a39074e558bc19a5bcd5787.gif'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_twitter-e571087b125dfd231014482a6587f5c4.gif'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_email-2771bca38eb671644661b63a354e47ab.gif'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/detailsFirstLookProgram_sm-f50273d31f2655385f3c99857bb86ce6.png'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '/static/img/details_icons/improved_by_fannie_mae.png'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/needclosingcostassistance-fde2fa162d6d341225813d799e86f1e4.jpg'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/readybuye-right-col-add-ff0dbd417b04a26a1bbd8b1aa27ee8e2.jpg'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/homeready-right-col-add-662e9cef0957dccb0d93040af60a82f3.jpg'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/fannieMaeLogo.svg?v=1'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/btn-app-store.png?v=1'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/btn-google-play.png?v=1'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/logoEqualHousing-5c2e72a64221424d5e765ec3a8382226.jpg'
+12-28 11:03-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:120-Url from page is under process
+12-28 11:03-INFO-FILE:scraper.py-FUNC:driver_get-LINE:82-driver.get was successfully made on the following url: https://www.homepath.com/listing/16-mulberry-ave-russellville-al-35653-46370389
+12-28 11:03-INFO-FILE:scraper.py-FUNC:info_data-LINE:221-info_data has been Successfully called
+12-28 11:03-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 16 Mulberry Ave
+Russellville, Alabama 35653
+12-28 11:03-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:03-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:03-INFO-FILE:scraper.py-FUNC:info_data-LINE:221-info_data has been Successfully called
+12-28 11:03-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 16 Mulberry Ave
+Russellville, Alabama 35653
+12-28 11:03-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:03-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:03-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:03-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:03-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:update_date-LINE:260-Successfully returned on update date
+12-28 11:03-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 16 Mulberry Ave
+Russellville, Alabama 35653
+12-28 11:03-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:03-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:update_date-LINE:260-Successfully returned on update date
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:03-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:03-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:03-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:03-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:130-Success! data has been inserted into SQL tables
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/logo-hp-1833910cc693e2e4425203c594fd3dd7.svg'
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_1.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_2.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_3.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_4.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_5.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_6.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_7.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_8.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_9.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_10.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_11.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_12.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_13.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_14.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_15.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_16.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_17.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_18.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_19.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_20.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_21.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_22.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_23.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_24.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_25.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_26.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_27.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_28.jpeg
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_29.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_30.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_31.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_32.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_33.png
+12-28 11:03-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_3_34.png
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_facebook-27b3bf154a39074e558bc19a5bcd5787.gif'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_twitter-e571087b125dfd231014482a6587f5c4.gif'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_email-2771bca38eb671644661b63a354e47ab.gif'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/hp/contact-image/494690/80/80?v=20201225'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/detailsFirstLookProgram_sm-f50273d31f2655385f3c99857bb86ce6.png'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/needclosingcostassistance-fde2fa162d6d341225813d799e86f1e4.jpg'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/readybuye-right-col-add-ff0dbd417b04a26a1bbd8b1aa27ee8e2.jpg'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/homeready-right-col-add-662e9cef0957dccb0d93040af60a82f3.jpg'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/fannieMaeLogo.svg?v=1'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/btn-app-store.png?v=1'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/btn-google-play.png?v=1'
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/logoEqualHousing-5c2e72a64221424d5e765ec3a8382226.jpg'
+12-28 11:03-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:120-Url from page is under process
+12-28 11:03-INFO-FILE:scraper.py-FUNC:driver_get-LINE:82-driver.get was successfully made on the following url: https://www.homepath.com/listing/2662-paden-pl-vestavia-al-35226-46383815
+12-28 11:03-INFO-FILE:scraper.py-FUNC:info_data-LINE:221-info_data has been Successfully called
+12-28 11:03-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 2662 Paden Pl
+Vestavia, Alabama 35226
+12-28 11:03-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:03-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:03-INFO-FILE:scraper.py-FUNC:info_data-LINE:221-info_data has been Successfully called
+12-28 11:03-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 2662 Paden Pl
+Vestavia, Alabama 35226
+12-28 11:03-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:03-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:03-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:03-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:04-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:04-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:04-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:04-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:04-INFO-FILE:scraper.py-FUNC:update_date-LINE:260-Successfully returned on update date
+12-28 11:04-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 2662 Paden Pl
+Vestavia, Alabama 35226
+12-28 11:04-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:04-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:04-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:04-INFO-FILE:scraper.py-FUNC:update_date-LINE:260-Successfully returned on update date
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:04-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:04-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:04-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:04-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:130-Success! data has been inserted into SQL tables
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/logo-hp-1833910cc693e2e4425203c594fd3dd7.svg'
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_1.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_2.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_3.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_4.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_5.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_6.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_7.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_8.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_9.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_10.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_11.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_12.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_13.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_14.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_15.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_16.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_17.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_18.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_19.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_20.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_21.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_22.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_23.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_24.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_25.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_26.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_27.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_28.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_29.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_30.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_31.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_32.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_33.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_34.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_35.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_36.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_37.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_38.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_4_39.png
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_facebook-27b3bf154a39074e558bc19a5bcd5787.gif'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_twitter-e571087b125dfd231014482a6587f5c4.gif'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_email-2771bca38eb671644661b63a354e47ab.gif'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/hp/contact-image/474082/80/80?v=20201225'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/detailsFirstLookProgram_sm-f50273d31f2655385f3c99857bb86ce6.png'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/needclosingcostassistance-fde2fa162d6d341225813d799e86f1e4.jpg'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/readybuye-right-col-add-ff0dbd417b04a26a1bbd8b1aa27ee8e2.jpg'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/homeready-right-col-add-662e9cef0957dccb0d93040af60a82f3.jpg'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/fannieMaeLogo.svg?v=1'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/btn-app-store.png?v=1'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/btn-google-play.png?v=1'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/logoEqualHousing-5c2e72a64221424d5e765ec3a8382226.jpg'
+12-28 11:04-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:120-Url from page is under process
+12-28 11:04-INFO-FILE:scraper.py-FUNC:driver_get-LINE:82-driver.get was successfully made on the following url: https://www.homepath.com/listing/413-andrew-avenue-anniston-al-36201-46385523
+12-28 11:04-INFO-FILE:scraper.py-FUNC:info_data-LINE:221-info_data has been Successfully called
+12-28 11:04-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 413 Andrew Avenue
+Anniston, Alabama 36201
+12-28 11:04-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:04-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:04-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:04-INFO-FILE:scraper.py-FUNC:info_data-LINE:221-info_data has been Successfully called
+12-28 11:04-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 413 Andrew Avenue
+Anniston, Alabama 36201
+12-28 11:04-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:04-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:04-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:04-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:04-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:04-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:04-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:04-INFO-FILE:scraper.py-FUNC:update_date-LINE:260-Successfully returned on update date
+12-28 11:04-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 413 Andrew Avenue
+Anniston, Alabama 36201
+12-28 11:04-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:04-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:04-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:04-INFO-FILE:scraper.py-FUNC:update_date-LINE:260-Successfully returned on update date
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:04-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:04-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:04-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:04-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:130-Success! data has been inserted into SQL tables
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/logo-hp-1833910cc693e2e4425203c594fd3dd7.svg'
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_5_1.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_5_2.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_5_3.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_5_4.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_5_5.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_5_6.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_5_7.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_5_8.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_5_9.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_5_10.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_5_11.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_5_12.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_5_13.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_5_14.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_5_15.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_5_16.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_5_17.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_5_18.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_5_19.png
+12-28 11:04-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_5_20.png
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_facebook-27b3bf154a39074e558bc19a5bcd5787.gif'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_twitter-e571087b125dfd231014482a6587f5c4.gif'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_email-2771bca38eb671644661b63a354e47ab.gif'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/detailsFirstLookProgram_sm-f50273d31f2655385f3c99857bb86ce6.png'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/needclosingcostassistance-fde2fa162d6d341225813d799e86f1e4.jpg'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/readybuye-right-col-add-ff0dbd417b04a26a1bbd8b1aa27ee8e2.jpg'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/homeready-right-col-add-662e9cef0957dccb0d93040af60a82f3.jpg'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/fannieMaeLogo.svg?v=1'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/btn-app-store.png?v=1'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/btn-google-play.png?v=1'
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/logoEqualHousing-5c2e72a64221424d5e765ec3a8382226.jpg'
+12-28 11:04-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:120-Url from page is under process
+12-28 11:04-INFO-FILE:scraper.py-FUNC:driver_get-LINE:82-driver.get was successfully made on the following url: https://www.homepath.com/listing/403-birchwood-lane-dothan-al-36301-46383715
+12-28 11:04-INFO-FILE:scraper.py-FUNC:info_data-LINE:221-info_data has been Successfully called
+12-28 11:04-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 403 Birchwood Lane
+Dothan, Alabama 36301
+12-28 11:04-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:04-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:04-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:04-INFO-FILE:scraper.py-FUNC:info_data-LINE:221-info_data has been Successfully called
+12-28 11:04-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 403 Birchwood Lane
+Dothan, Alabama 36301
+12-28 11:04-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:04-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:04-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:04-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:04-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:04-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:05-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:05-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:05-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:05-INFO-FILE:scraper.py-FUNC:update_date-LINE:260-Successfully returned on update date
+12-28 11:05-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 403 Birchwood Lane
+Dothan, Alabama 36301
+12-28 11:05-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:05-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:05-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:05-INFO-FILE:scraper.py-FUNC:update_date-LINE:260-Successfully returned on update date
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:05-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:05-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:05-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:05-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:05-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:130-Success! data has been inserted into SQL tables
+12-28 11:05-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/logo-hp-1833910cc693e2e4425203c594fd3dd7.svg'
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_1.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_2.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_3.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_4.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_5.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_6.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_7.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_8.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_9.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_10.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_11.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_12.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_13.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_14.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_15.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_16.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_17.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_18.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_19.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_20.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_21.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_22.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_23.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_24.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_25.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_26.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_27.jpeg
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_28.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_29.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_30.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_31.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_32.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_33.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_34.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_35.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_36.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_37.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_38.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_39.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_40.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_41.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_42.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_43.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_44.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_45.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_46.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_47.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_48.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_49.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_50.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_51.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_52.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_53.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_54.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_55.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_56.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_57.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_58.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_59.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_60.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_61.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_62.png
+12-28 11:05-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_6_63.png
+12-28 11:05-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_facebook-27b3bf154a39074e558bc19a5bcd5787.gif'
+12-28 11:05-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_twitter-e571087b125dfd231014482a6587f5c4.gif'
+12-28 11:05-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_email-2771bca38eb671644661b63a354e47ab.gif'
+12-28 11:05-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/detailsFirstLookProgram_sm-f50273d31f2655385f3c99857bb86ce6.png'
+12-28 11:05-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '/static/img/details_icons/improved_by_fannie_mae.png'
+12-28 11:05-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/needclosingcostassistance-fde2fa162d6d341225813d799e86f1e4.jpg'
+12-28 11:05-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/readybuye-right-col-add-ff0dbd417b04a26a1bbd8b1aa27ee8e2.jpg'
+12-28 11:05-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/homeready-right-col-add-662e9cef0957dccb0d93040af60a82f3.jpg'
+12-28 11:05-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/fannieMaeLogo.svg?v=1'
+12-28 11:05-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/btn-app-store.png?v=1'
+12-28 11:05-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/btn-google-play.png?v=1'
+12-28 11:05-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/logoEqualHousing-5c2e72a64221424d5e765ec3a8382226.jpg'
+12-28 11:05-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:120-Url from page is under process
+12-28 11:05-INFO-FILE:scraper.py-FUNC:driver_get-LINE:82-driver.get was successfully made on the following url: https://www.homepath.com/listing/110-terry-drive-brewton-al-36426-46384196
+12-28 11:05-INFO-FILE:scraper.py-FUNC:info_data-LINE:221-info_data has been Successfully called
+12-28 11:05-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 110 Terry Drive
+Brewton, Alabama 36426
+12-28 11:05-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:05-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:05-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:05-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:05-INFO-FILE:scraper.py-FUNC:info_data-LINE:221-info_data has been Successfully called
+12-28 11:05-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 110 Terry Drive
+Brewton, Alabama 36426
+12-28 11:05-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:05-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:05-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:05-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:05-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:05-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:05-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:05-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:05-INFO-FILE:scraper.py-FUNC:update_date-LINE:260-Successfully returned on update date
+12-28 11:05-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 110 Terry Drive
+Brewton, Alabama 36426
+12-28 11:05-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:05-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:05-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:05-INFO-FILE:scraper.py-FUNC:update_date-LINE:260-Successfully returned on update date
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:05-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:05-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:05-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:06-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:06-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called
+12-28 11:06-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:130-Success! data has been inserted into SQL tables
+12-28 11:06-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/logo-hp-1833910cc693e2e4425203c594fd3dd7.svg'
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_1.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_2.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_3.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_4.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_5.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_6.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_7.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_8.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_9.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_10.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_11.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_12.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_13.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_14.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_15.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_16.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_17.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_18.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_19.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_20.png
+12-28 11:06-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/hecm_icon-9deda67fb0fcc017434e88b4862c757f.jpg'
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_22.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_23.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_24.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_25.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_26.png
+12-28 11:06-INFO-FILE:scraper.py-FUNC:get_image-LINE:68-An image was successfully downloaded. File name: img_7_27.png
+12-28 11:06-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_facebook-27b3bf154a39074e558bc19a5bcd5787.gif'
+12-28 11:06-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_twitter-e571087b125dfd231014482a6587f5c4.gif'
+12-28 11:06-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/addthis_email-2771bca38eb671644661b63a354e47ab.gif'
+12-28 11:06-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/needclosingcostassistance-fde2fa162d6d341225813d799e86f1e4.jpg'
+12-28 11:06-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/readybuye-right-col-add-ff0dbd417b04a26a1bbd8b1aa27ee8e2.jpg'
+12-28 11:06-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/homeready-right-col-add-662e9cef0957dccb0d93040af60a82f3.jpg'
+12-28 11:06-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/fannieMaeLogo.svg?v=1'
+12-28 11:06-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/btn-app-store.png?v=1'
+12-28 11:06-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/btn-google-play.png?v=1'
+12-28 11:06-CRITICAL-FILE:scraper.py-FUNC:get_image-LINE:70-The following error has occurred:unknown url type: '//d2196qnssmcium.cloudfront.net/static/img/logoEqualHousing-5c2e72a64221424d5e765ec3a8382226.jpg'
+12-28 11:06-INFO-FILE:main.py-FUNC:do_the_actual_work-LINE:120-Url from page is under process
+12-28 11:06-INFO-FILE:scraper.py-FUNC:driver_get-LINE:82-driver.get was successfully made on the following url: https://www.homepath.com/listing/201-lakeside-dr-dothan-al-36301-46382054
+12-28 11:06-INFO-FILE:scraper.py-FUNC:info_data-LINE:221-info_data has been Successfully called
+12-28 11:06-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 201 Lakeside Dr
+Dothan, Alabama 36301
+12-28 11:06-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:06-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:06-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:06-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:06-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:06-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:06-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:06-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:06-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:06-INFO-FILE:scraper.py-FUNC:info_data-LINE:221-info_data has been Successfully called
+12-28 11:06-INFO-FILE:scraper.py-FUNC:full_address-LINE:112-Successfully returned address : 201 Lakeside Dr
+Dothan, Alabama 36301
+12-28 11:06-INFO-FILE:scraper.py-FUNC:just_listed_status-LINE:125-Successfully returned boolean regarding just_listed
+12-28 11:06-INFO-FILE:scraper.py-FUNC:reo_id-LINE:135-Successfully returned on reo_id
+12-28 11:06-INFO-FILE:scraper.py-FUNC:mls_id-LINE:144-Successfully returned on mls_id
+12-28 11:06-INFO-FILE:scraper.py-FUNC:agent_name-LINE:154-Successfully returned on agent_name
+12-28 11:06-INFO-FILE:scraper.py-FUNC:agent_phone-LINE:165-Successfully returned on agent_phone
+12-28 11:06-INFO-FILE:scraper.py-FUNC:agent_company_name-LINE:176-Successfully returned on agent_company_name
+12-28 11:06-INFO-FILE:scraper.py-FUNC:agent_company_phone-LINE:187-Successfully returned on agent_company_phone
+12-28 11:06-INFO-FILE:scraper.py-FUNC:agent_company_address-LINE:198-Successfully returned on agent_company_address
+12-28 11:06-CRITICAL-FILE:scraper.py-FUNC:description-LINE:213-The following error has occurred:Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.88)
+
+12-28 11:06-INFO-FILE:scraper.py-FUNC:table_data-LINE:253-table_data has been Successfully called

@@ -39,7 +39,8 @@ class Sql:
         FROM company
         WHERE comp_name = %s
         AND comp_phone = %s
-        AND comp_address = %s""", [self.sc.agent_company_name(), self.sc.agent_company_phone(), self.sc.agent_company_address()])
+        AND comp_address = %s""", [self.sc.agent_company_name(), self.sc.agent_company_phone(),
+                                   self.sc.agent_company_address()])
         if self.cur.fetchall()[0][0] == 0:
             return True
         return False
@@ -52,6 +53,7 @@ class Sql:
                                                 self.sc.reo_id(), self.sc.mls_id(), self.sc.update_date(), self.place])
         self.last_id_property = self.cur.lastrowid
         print(f"last id property: {self.last_id_property}")
+        return self.last_id_property
 
     def sql_agents(self):
         """Insert values into agents table"""

@@ -9,16 +9,13 @@ from myconstants import *
 import logging
 from pyvirtualdisplay import Display
 from sys import platform
-import os, ssl
+import os
 
 
 logging.basicConfig(handlers=[logging.FileHandler('scraping.log', 'w', 'utf-8')],
                     format="%(asctime)s-%(levelname)s-FILE:%(filename)s-FUNC:%(funcName)s-LINE:%(lineno)d-%(message)s",
                     datefmt='%m-%d %H:%M',
                     level=logging.INFO)
-if (not os.environ.get('PYTHONHTTPSVERIFY', '') and
-        getattr(ssl, '_create_unverified_context', None)):
-    ssl._create_default_https_context = ssl._create_unverified_context()
 
 
 class Scraper:
@@ -49,30 +46,30 @@ class Scraper:
         self.driver = webdriver.Chrome(executable_path=self.path_to_driver)
         logging.info(f'A driver object was successfully made')
 
-    def get_image(self, page, inner_folder):
+    def get_image(self, property_id):
         """
         Downloading images from a given site.
         :param inner_folder the folder where the image is store, created by make_inner_folder()
         :param page the current page in the site the scraper is working on
         :return: None. That function is just downloading the images
         """
-        # soup = BeautifulSoup(self.driver.page_source, 'html.parser')
-        # img_tags = soup.find_all('img')
-        # img_urls = [img['src'] for img in img_tags]
-        # for j, img in enumerate(img_urls):  # All images from that location
-        #     extension = img.split('.')[LAST_ELEMENT][:FULL_EXTENSTION]
-        #     if extension == 'net':
-        #         extension = 'png'
-        #     elif extension == 'jpe':
-        #         extension = 'jpeg'
-        #     file_name = f"img_{j}." + extension
-        #     try:
-        #         urllib.request.urlretrieve(img, os.path.join(self.place, page, inner_folder, file_name))
-        #         logging.info(f'An image was successfully downloaded. File name: {file_name}')
-        #     except ValueError as e:
-        #         logging.critical(f'The following error has occurred:{e}')
-        #         pass
-        return
+        soup = BeautifulSoup(self.driver.page_source, 'html.parser')
+        img_tags = soup.find_all('img')
+        img_urls = [img['src'] for img in img_tags]
+        for j, img in enumerate(img_urls):  # All images from that location
+            extension = img.split('.')[LAST_ELEMENT][:FULL_EXTENSTION]
+            if extension == 'net':
+                extension = 'png'
+            elif extension == 'jpe':
+                extension = 'jpeg'
+            file_name = f"img_{property_id}_{j}." + extension
+            try:
+                urllib.request.urlretrieve(img, os.path.join(self.place, file_name))
+                logging.info(f'An image was successfully downloaded. File name: {file_name}')
+            except Exception as e:
+                logging.critical(f'The following error has occurred:{e}')
+                pass
+
     def tables_len(self):
         """return the len of a Selenium object"""
         table_len = len(self.driver.find_elements(By.TAG_NAME, "td"))

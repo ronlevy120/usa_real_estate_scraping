@@ -39,9 +39,9 @@ class Tables:
         self.cur.execute('''CREATE TABLE IF NOT EXISTS properties (
          idproperties INT PRIMARY KEY AUTO_INCREMENT,
          address VARCHAR(200),
-         just_list VARCHAR(45),
-         reo_id VARCHAR(45),
-         mls_id VARCHAR(45),
+         just_list VARCHAR(200),
+         reo_id VARCHAR(200),
+         mls_id VARCHAR(200),
          update_date VARCHAR (200),
          state VARCHAR (200))
         ''')
@@ -51,8 +51,8 @@ class Tables:
         """Create agent table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS agents (
         idagents INT PRIMARY KEY AUTO_INCREMENT,
-        agent_name VARCHAR(45),
-        agent_phone VARCHAR(45))
+        agent_name VARCHAR(200),
+        agent_phone VARCHAR(200))
         ''')
 
     def table_company(self):
@@ -60,8 +60,8 @@ class Tables:
         self.cur.execute('''CREATE TABLE IF NOT EXISTS company (
         idcompany INT PRIMARY KEY AUTO_INCREMENT,
         comp_name VARCHAR(200),
-        comp_phone VARCHAR(45),
-        comp_address VARCHAR(45))
+        comp_phone VARCHAR(200),
+        comp_address VARCHAR(200))
         ''')
 
     def table_prop_description(self):
@@ -83,20 +83,20 @@ class Tables:
         bedrooms FLOAT(11),
         Bathrooms FLOAT(11),
         `Full Baths` INT(11),
-        `Garage Description` VARCHAR(45),
-        `Basement` VARCHAR(45),
+        `Garage Description` VARCHAR(200),
+        `Basement` VARCHAR(200),
         `Total Rooms` FLOAT(11),
         `Living Area Size` FLOAT(11),
         `Lot Size in acres` FLOAT(11),
-        Style VARCHAR(45),
-        Exterior VARCHAR(45),
-        Roof VARCHAR(45),
-        Flooring VARCHAR(45),
-        `Air Conditioning` VARCHAR(45),
-        Utilities VARCHAR(45),
-        Pool VARCHAR(45),
-        `Sewer Type` VARCHAR(45),
-        HOA VARCHAR(45),
+        Style VARCHAR(200),
+        Exterior VARCHAR(200),
+        Roof VARCHAR(200),
+        Flooring VARCHAR(200),
+        `Air Conditioning` VARCHAR(200),
+        Utilities VARCHAR(200),
+        Pool VARCHAR(200),
+        `Sewer Type` VARCHAR(200),
+        HOA VARCHAR(200),
         `HOA Fees is US Dollar` INT(11),
         `Year Built` DATE,
         FOREIGN KEY (idproperties)
@@ -107,10 +107,10 @@ class Tables:
         """Create Property_Tax_Roll_Details table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS `property_tax_roll_details` (
         idtax_details INT PRIMARY KEY AUTO_INCREMENT,
-        `Elementary School` VARCHAR(45),
-        `Junior High School` VARCHAR(45),
-        `Senior High School` VARCHAR(45),
-        Subdivision VARCHAR(45),
+        `Elementary School` VARCHAR(200),
+        `Junior High School` VARCHAR(200),
+        `Senior High School` VARCHAR(200),
+        Subdivision VARCHAR(200),
         idproperties INT(11),
         FOREIGN KEY (idproperties)
         REFERENCES `properties` (`idproperties`))
@@ -120,15 +120,15 @@ class Tables:
         """Create County_Tax_Roll_Details table"""
         self.cur.execute('''CREATE TABLE IF NOT EXISTS county_tax_roll_details (
         idcounty_details INT PRIMARY KEY AUTO_INCREMENT,
-        Fireplaces VARCHAR(45),
+        Fireplaces VARCHAR(200),
         `Half Baths` INT(11),
-        `Property Type` VARCHAR(45),
-        APN VARCHAR(45),
+        `Property Type` VARCHAR(200),
+        APN VARCHAR(200),
         Baths FLOAT(11),
-        `Construction Type` VARCHAR(45),
+        `Construction Type` VARCHAR(200),
         `Full Baths` INT(11),
         `Land Area` FLOAT(11),
-        `Num_of Stories` INT(11),
+        `Num_of Stories` VARCHAR(200),
         `idproperties` INT(11),
         FOREIGN KEY (idproperties)
         REFERENCES `properties` (`idproperties`))
